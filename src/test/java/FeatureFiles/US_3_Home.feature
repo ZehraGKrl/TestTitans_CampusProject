@@ -15,8 +15,9 @@ Feature: Home Tab Menu Functionality
         |gradingButton|
         |moreButton|
         |chatButtonOpen|
-        |chatButtonClose|
+        |closeButton|
         |newMessageButton|
+        |closeButton|
         |profileSetingsButton|
 
       Examples:

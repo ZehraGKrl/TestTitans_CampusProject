@@ -28,7 +28,7 @@ public class DialogContent_US_3 extends ParentPage {
     public WebElement assignmentButton;
     @FindBy(xpath = "//span[text()='Grading']")
     public WebElement gradingButton;
-    @FindBy(css = "[class='svg-inline--fa fa-bars fa-fw']")
+    @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
     public WebElement moreButton;
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[7]")
     public WebElement chatButtonOpen;

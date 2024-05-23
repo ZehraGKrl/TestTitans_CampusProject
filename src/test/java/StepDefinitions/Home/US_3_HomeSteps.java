@@ -2,6 +2,7 @@ package StepDefinitions.Home;
 
 import Pages.DialogContent_US_3;
 import Pages.LeftNav_US_3;
+import StepDefinitions.Hooks;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -16,6 +17,7 @@ public class US_3_HomeSteps {
 
     DialogContent_US_3 dc=new DialogContent_US_3();
 
+
     @Given("Navigate to Campus")
     public void navigateToCampus() {
         GWD.getDriver().get("https://test.mersys.io/");
@@ -29,15 +31,18 @@ public class US_3_HomeSteps {
     }
 
     @Given("Click on all buttons in the tab menu")
-    public void clickOnAllButtonsInTheTabMenu(DataTable tabMenuButtons) {
+    public void clickOnAllButtonsInTheTabMenu(DataTable tabMenuButtons) throws InterruptedException {
         List<String> tabMenuButtonList=tabMenuButtons.asList(String.class);
 
         for (int i = 0; i < tabMenuButtonList.size(); i++) {
             WebElement webElement = dc.getWebelement(tabMenuButtonList.get(i));
             dc.myClick(webElement);
             new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
+            Thread.sleep(3000);
 
         }
+
+        GWD.quitDriver();
 
     }
 
