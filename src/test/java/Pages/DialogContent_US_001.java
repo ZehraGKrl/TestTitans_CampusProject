@@ -21,4 +21,11 @@ public class DialogContent_US_001 extends ParentPage {
     @FindBy(css = "[class='mat-expansion-panel-header-description ng-star-inserted']")
     public WebElement invalidLoginMessage;
 
+    public WebElement getWebElement(String strElement){
+        switch (strElement){
+
+        }
+        return null;
+    }
+
 }

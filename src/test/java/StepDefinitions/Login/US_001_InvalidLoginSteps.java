@@ -2,6 +2,7 @@ package StepDefinitions.Login;
 
 import Pages.DialogContent_US_001;
 import Pages.LeftNav_US_001;
+import Utilities.GWD;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -20,6 +21,8 @@ public class US_001_InvalidLoginSteps {
     @Then("User should see Invalid username or password message")
     public void userShouldSeeInvalidUsernameOrPasswordMessage() {
         dcm.verifyContainsText(dcm.invalidLoginMessage, "Invalid username or password");
+
+        GWD.quitDriver();
 
     }
 }
