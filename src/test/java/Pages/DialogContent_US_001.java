@@ -9,10 +9,13 @@ import org.openqa.selenium.support.PageFactory;
 public class DialogContent_US_001 extends ParentPage {
     public DialogContent_US_001() {PageFactory.initElements(GWD.getDriver(),this);}
 
-    @FindBy(xpath = "(//div[@class='mdc-notched-outline__notch'])[1]")
+    @FindBy(css = "[placeholder='Kullanıcı Adı']")
     public WebElement username;
 
-    @FindBy(css = "[class='mdc-notched-outline ng-tns-c1534922977-50 mdc-notched-outline--upgraded ng-star-inserted']")
+    @FindBy(css = "[formcontrolname='password']")
     public WebElement password;
+
+    @FindBy(xpath = "//span[text()=' GİRİŞ YAP ']")
+    public WebElement loginButton;
 
 }
