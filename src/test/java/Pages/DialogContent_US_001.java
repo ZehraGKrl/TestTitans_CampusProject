@@ -7,7 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class DialogContent_US_001 extends ParentPage {
-    public DialogContent_US_001() {PageFactory.initElements(GWD.getDriver(),this);}
+    public DialogContent_US_001() {
+        PageFactory.initElements(GWD.getDriver(), this);
+    }
 
     @FindBy(css = "[placeholder='Kullanıcı Adı']")
     public WebElement username;
@@ -21,8 +23,12 @@ public class DialogContent_US_001 extends ParentPage {
     @FindBy(css = "[class='mat-expansion-panel-header-description ng-star-inserted']")
     public WebElement invalidLoginMessage;
 
-    public WebElement getWebElement(String strElement){
-        switch (strElement){
+    public WebElement getWebElement(String strElement) {
+        switch (strElement) {
+            case "usernameInput":
+                return this.username;
+            case "passwordInput":
+                return this.password;
 
         }
         return null;
