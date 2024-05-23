@@ -18,6 +18,7 @@ public class ParentPage {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         scrollToElement(element);
         element.click();
+
     }
 
     public void mySendKeys(WebElement element, String text){
