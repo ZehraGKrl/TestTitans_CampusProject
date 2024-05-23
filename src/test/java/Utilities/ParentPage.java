@@ -43,7 +43,7 @@ public class ParentPage {
         wait.until(ExpectedConditions.textToBePresentInElement(element,value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
 
-        new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
+//        new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
 
     }
 

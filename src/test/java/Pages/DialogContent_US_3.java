@@ -30,11 +30,15 @@ public class DialogContent_US_3 extends ParentPage {
     public WebElement gradingButton;
     @FindBy(css = "[class='svg-inline--fa fa-bars fa-fw']")
     public WebElement moreButton;
-    @FindBy(css = "[class='mat-mdc-tooltip-trigger mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base mat-mdc-tooltip-disabled']>:nth-child(3)")
-    public WebElement chatButton;
-    @FindBy(xpath = "(//span[@class='mat-ripple mat-mdc-button-ripple'])[2]")
-    public WebElement newMessageButton;
-    @FindBy(css = "[class='username mr-12']")
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[7]")
+    public WebElement chatButtonOpen;
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[33]")
+    public WebElement chatButtonClose;
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[8]")
+    public WebElement newMessageButtonOpen;
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[33]")
+    public WebElement newMessageButtonClose;
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[9]")
     public WebElement profileSetingsButton;
 
     public WebElement getWebelement(String element){
@@ -53,10 +57,14 @@ public class DialogContent_US_3 extends ParentPage {
                 return this.gradingButton;
             case "moreButton":
                 return this.moreButton;
-            case "chatButton":
-                return this.chatButton;
-            case "newMessageButton":
-                return this.newMessageButton;
+            case "chatButtonOpen":
+                return this.chatButtonOpen;
+            case "chatButtonClose":
+                return this.chatButtonClose;
+            case "newMessageButtonOpen":
+                return this.newMessageButtonOpen;
+            case "newMessageButtonClose":
+                return this.newMessageButtonClose;
             case "profileSetingsButton":
                 return this.profileSetingsButton;
 
