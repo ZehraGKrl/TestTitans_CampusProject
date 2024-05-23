@@ -10,6 +10,7 @@ Feature: Invalid Login Functionality
 
     Examples:
       | user      | pass   |
+      | Student   | 123    |
       | Studenttt | S12345 |
       | Student_7 | 1234   |
 
