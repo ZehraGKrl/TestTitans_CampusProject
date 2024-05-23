@@ -32,7 +32,7 @@ public class DialogContent_US_3 extends ParentPage {
     public WebElement moreButton;
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[7]")
     public WebElement chatButtonOpen;
-    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[33]")
+    @FindBy(css = "[data-icon='square-xmark'] path")
     public WebElement closeButton;
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[8]")
     public WebElement newMessageButtonOpen;
