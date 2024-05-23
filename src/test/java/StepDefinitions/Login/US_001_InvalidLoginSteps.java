@@ -19,6 +19,7 @@ public class US_001_InvalidLoginSteps {
 
     @Then("User should see Invalid username or password message")
     public void userShouldSeeInvalidUsernameOrPasswordMessage() {
+        dcm.verifyContainsText(dcm.invalidLoginMessage, "Invalid username or password");
 
     }
 }

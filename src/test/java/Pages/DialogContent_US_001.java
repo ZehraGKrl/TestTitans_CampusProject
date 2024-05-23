@@ -18,4 +18,7 @@ public class DialogContent_US_001 extends ParentPage {
     @FindBy(xpath = "//span[text()=' GİRİŞ YAP ']")
     public WebElement loginButton;
 
+    @FindBy(css = "[class='mat-expansion-panel-header-description ng-star-inserted']")
+    public WebElement invalidLoginMessage;
+
 }
