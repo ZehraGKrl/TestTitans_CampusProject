@@ -33,11 +33,9 @@ public class DialogContent_US_3 extends ParentPage {
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[7]")
     public WebElement chatButtonOpen;
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[33]")
-    public WebElement chatButtonClose;
+    public WebElement closeButton;
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[8]")
     public WebElement newMessageButtonOpen;
-    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[33]")
-    public WebElement newMessageButtonClose;
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[9]")
     public WebElement profileSetingsButton;
 
@@ -59,12 +57,10 @@ public class DialogContent_US_3 extends ParentPage {
                 return this.moreButton;
             case "chatButtonOpen":
                 return this.chatButtonOpen;
-            case "chatButtonClose":
-                return this.chatButtonClose;
+            case "closeButton":
+                return this.closeButton;
             case "newMessageButtonOpen":
                 return this.newMessageButtonOpen;
-            case "newMessageButtonClose":
-                return this.newMessageButtonClose;
             case "profileSetingsButton":
                 return this.profileSetingsButton;
 

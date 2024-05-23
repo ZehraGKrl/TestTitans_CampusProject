@@ -9,11 +9,11 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
-    @Before // Cucumber için Annotation
+    @Before
     public void before() {
     }
 
-    @After // Cucumber After Annotation'u her senaryodan sonra çalışır.
+    @After
     public void after(Scenario senaryo) {
 
 
