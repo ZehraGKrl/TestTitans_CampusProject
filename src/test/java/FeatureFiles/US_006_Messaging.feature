@@ -10,4 +10,6 @@ Feature: Messaging Functionality
     Then Click on the element in Dialog
       | loginButton |
     And Main page should be displayed
+    And Click on the element Top Menu
+      | hamburgerMenu |
   
