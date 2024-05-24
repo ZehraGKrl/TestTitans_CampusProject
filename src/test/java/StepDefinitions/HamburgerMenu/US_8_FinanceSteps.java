@@ -2,8 +2,12 @@ package StepDefinitions.HamburgerMenu;
 
 import Pages.DialogContent_US_3;
 import Pages.LeftNav_US_3;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class US_8_FinanceSteps {
 
@@ -18,10 +22,14 @@ public class US_8_FinanceSteps {
         ln.myClick(ln.loginButton);
     }
 
-    @When("Make payment by clicking on the finance section")
-    public void makePaymentByClickingOnTheFinanceSection() {
+    @When("Go to the payment screen by clicking on the finance section")
+    public void GoToThePaymentScreenByClickingOnTheFinanceSection(DataTable financeButtons){
+        List<String> financeButtonList = financeButtons.asList(String.class);
 
-
+        for (int i = 0; i < financeButtonList.size(); i++) {
+            WebElement webElement =ln.getWebelement(financeButtonList.get(i));
+            ln.myClick(webElement);
+        }
 
     }
 
