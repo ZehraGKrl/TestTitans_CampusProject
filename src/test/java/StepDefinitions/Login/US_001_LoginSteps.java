@@ -2,6 +2,7 @@ package StepDefinitions.Login;
 
 import Pages.DialogContent_US_001;
 import Pages.LeftNav_US_001;
+import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -39,5 +40,7 @@ public class US_001_LoginSteps {
     @And("Main page should be displayed")
     public void mainPageShouldBeDisplayed() {
         dcm.verifyContainsText(dcm.courses, "Courses");
+
+        GWD.quitDriver();
     }
 }
