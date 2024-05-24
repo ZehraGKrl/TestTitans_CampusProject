@@ -1,9 +1,11 @@
 package StepDefinitions.HamburgerMenu;
 
 import Pages.LeftNav_US_006;
+import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
@@ -18,5 +20,10 @@ public class US_006_Messaging {
             WebElement buttonWebElement = lfm.getWebElement(textList.get(i));
             lfm.myClick(buttonWebElement);
         }
+    }
+
+    @And("Hover Over the messaging button")
+    public void hoverOverTheMessagingButton() {
+        Actions ActionDriver=new Actions(GWD.getDriver());
     }
 }

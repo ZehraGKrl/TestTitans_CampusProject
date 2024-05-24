@@ -12,4 +12,5 @@ Feature: Messaging Functionality
     And Main page should be displayed
     And Click on the element Top Menu
       | hamburgerMenu |
+    And Hover Over the messaging button
   
