@@ -1,4 +1,6 @@
 package Pages;
 
-public class DialogContent_US_006 {
+import Utilities.ParentPage;
+
+public class DialogContent_US_006 extends ParentPage {
 }
