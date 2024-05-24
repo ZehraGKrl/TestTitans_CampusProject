@@ -18,6 +18,10 @@ public class DialogContent_US_3 extends ParentPage {
     public WebElement myFinanceButton;
     @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
     public WebElement moreButton;
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[18]")
+    public WebElement viewButton;
+    @FindBy(css = "[id='mat-radio-28-input']")
+    public WebElement stripeButton;
 
 
 public WebElement getWebelement(String element){
@@ -30,6 +34,10 @@ public WebElement getWebelement(String element){
             return this.financeButton;
         case "myFinanceButton":
             return this.myFinanceButton;
+        case "viewButton":
+            return this.viewButton;
+        case "stripeButton":
+            return this.stripeButton;
 
     }
     return null;
