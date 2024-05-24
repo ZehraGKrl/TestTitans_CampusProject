@@ -23,12 +23,17 @@ public class DialogContent_US_001 extends ParentPage {
     @FindBy(css = "[class='mat-expansion-panel-header-description ng-star-inserted']")
     public WebElement invalidLoginMessage;
 
+    @FindBy(xpath = "(//span[text()='Courses'])[1]")
+    public WebElement courses;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "usernameInput":
                 return this.username;
             case "passwordInput":
                 return this.password;
+            case "loginButton":
+                return  this.loginButton;
 
         }
         return null;
