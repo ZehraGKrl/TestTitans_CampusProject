@@ -4,6 +4,7 @@ import Pages.DialogContent_US_3;
 import Pages.LeftNav_US_3;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 
@@ -27,11 +28,16 @@ public class US_8_FinanceSteps {
         List<String> financeButtonList = financeButtons.asList(String.class);
 
         for (int i = 0; i < financeButtonList.size(); i++) {
-            WebElement webElement =ln.getWebelement(financeButtonList.get(i));
-            ln.myClick(webElement);
+            WebElement webElement =dc.getWebelement(financeButtonList.get(i));
+            dc.myClick(webElement);
         }
 
     }
 
 
+    @Then("Make payment in My finance section")
+    public void makePaymentInMyFinanceSection() {
+
+
+    }
 }

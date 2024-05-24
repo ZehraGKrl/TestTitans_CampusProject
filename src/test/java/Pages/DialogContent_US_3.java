@@ -12,8 +12,28 @@ public class DialogContent_US_3 extends ParentPage {
         PageFactory.initElements(GWD.getDriver(),this);
     }
 
+    @FindBy(xpath = "(//span[@class='mat-mdc-menu-item-text'])[2]")
+    public WebElement financeButton;
+    @FindBy(xpath = "(//span[@class='mat-mdc-menu-item-text'])[7]")
+    public WebElement myFinanceButton;
+    @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
+    public WebElement moreButton;
 
 
+public WebElement getWebelement(String element){
+
+    switch (element) {
+
+        case "moreButton":
+            return this.moreButton;
+        case "financeButton":
+            return this.financeButton;
+        case "myFinanceButton":
+            return this.myFinanceButton;
+
+    }
+    return null;
+}
 
 
 
