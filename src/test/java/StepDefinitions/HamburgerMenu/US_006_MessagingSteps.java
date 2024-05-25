@@ -41,15 +41,7 @@ public class US_006_MessagingSteps extends ParentPage {
 
     @And("Click on the element Top Menu")
     public void clickOnTheElementTopMenu(DataTable button) {
-        wait.until(new ExpectedCondition<Boolean>() {
-
-           public Boolean apply(WebDriver driver) {
-                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
-            }
-        });
-
-        // Sayfanın tamamen yüklenene kadar bekletir.
-
+        wait.until(ExpectedConditions.elementToBeClickable(lfm.hamburgerMenu));
 
         List<String> textList = button.asList(String.class);
 
