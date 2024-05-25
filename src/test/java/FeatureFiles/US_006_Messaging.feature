@@ -15,4 +15,7 @@ Feature: Messaging Functionality
       | hamburgerMenu |
 
     And Hover Over the messaging button
+
+    And Click on the element in Dialog
+      | outboxButton |
   

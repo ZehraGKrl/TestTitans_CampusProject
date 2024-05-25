@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class DialogContent_US_001 extends ParentPage {
-    public DialogContent_US_001() {
+public class DialogContent_US_M extends ParentPage {
+    public DialogContent_US_M() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
@@ -26,6 +26,10 @@ public class DialogContent_US_001 extends ParentPage {
     @FindBy(xpath = "(//span[text()='Courses'])[1]")
     public WebElement courses;
 
+    @FindBy(xpath = "//span[text()='Outbox']")
+    public WebElement outboxButton;
+
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "usernameInput":
@@ -34,6 +38,8 @@ public class DialogContent_US_001 extends ParentPage {
                 return this.password;
             case "loginButton":
                 return  this.loginButton;
+            case "outboxButton":
+                return this.outboxButton;
 
         }
         return null;

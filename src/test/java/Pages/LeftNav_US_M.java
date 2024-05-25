@@ -6,12 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LeftNav_US_006 extends ParentPage {
-    public LeftNav_US_006() {
+public class LeftNav_US_M extends ParentPage {
+    public LeftNav_US_M() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[6]")
+    @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
     public WebElement hamburgerMenu;
 
     @FindBy(xpath = "//span[text()='Messaging']")
