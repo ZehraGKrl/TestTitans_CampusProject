@@ -14,13 +14,13 @@ public class DialogContent_US_3 extends ParentPage {
 
     @FindBy(xpath = "(//span[@class='mat-mdc-menu-item-text'])[2]")
     public WebElement financeButton;
-    @FindBy(xpath = "(//span[@class='mat-mdc-menu-item-text'])[7]")
+    @FindBy(xpath = "//span[text()='My Finance']")
     public WebElement myFinanceButton;
     @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
     public WebElement moreButton;
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[18]")
     public WebElement viewButton;
-    @FindBy(css = "[id='mat-radio-28-input']")
+    @FindBy(css = "(//div[@class='mdc-radio__background'])[1]")
     public WebElement stripeButton;
 
 

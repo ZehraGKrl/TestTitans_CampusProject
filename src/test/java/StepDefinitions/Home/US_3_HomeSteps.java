@@ -31,19 +31,17 @@ public class US_3_HomeSteps {
     }
 
     @Given("Click on all buttons in the tab menu")
-    public void clickOnAllButtonsInTheTabMenu(DataTable tabMenuButtons) throws InterruptedException {
+    public void clickOnAllButtonsInTheTabMenu(DataTable tabMenuButtons)  {
         List<String> tabMenuButtonList=tabMenuButtons.asList(String.class);
 
         for (int i = 0; i < tabMenuButtonList.size(); i++) {
             WebElement webElement = ln.getWebelement(tabMenuButtonList.get(i));
             ln.myClick(webElement);
             new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
-            Thread.sleep(3000);
+
 
         }
-
         GWD.quitDriver();
-
     }
 
 
