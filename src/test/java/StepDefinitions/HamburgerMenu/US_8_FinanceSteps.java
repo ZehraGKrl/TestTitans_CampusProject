@@ -1,24 +1,20 @@
 package StepDefinitions.HamburgerMenu;
 
-import Pages.DialogContent_US_3;
-import Pages.LeftNav_US_3;
+import Pages.DialogContent_US_O;
+import Pages.LeftNav_US_O;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.List;
 
 public class US_8_FinanceSteps {
 
-    DialogContent_US_3 dc=new DialogContent_US_3();
-    LeftNav_US_3 ln=new LeftNav_US_3();
+    DialogContent_US_O dc=new DialogContent_US_O();
+    LeftNav_US_O ln=new LeftNav_US_O();
 
     @Given("Enter username and password and click login button")
     public void enterUsernameAndPasswordAndClickLoginButton() {
@@ -47,7 +43,6 @@ public class US_8_FinanceSteps {
         for (int i = 0; i < paymentButtonList.size(); i++) {
             WebElement webElement = dc.getWebelement(paymentButtonList.get(i));
             dc.myClick(webElement);
-
 
         }
         GWD.quitDriver();

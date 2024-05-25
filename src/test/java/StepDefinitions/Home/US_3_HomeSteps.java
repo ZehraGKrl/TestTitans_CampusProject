@@ -1,8 +1,7 @@
 package StepDefinitions.Home;
 
-import Pages.DialogContent_US_3;
-
-import Pages.LeftNav_US_3;
+import Pages.DialogContent_US_O;
+import Pages.LeftNav_US_O;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -15,8 +14,8 @@ import java.util.List;
 
 public class US_3_HomeSteps {
 
-    LeftNav_US_3 ln=new LeftNav_US_3();
-
+    DialogContent_US_O dc=new DialogContent_US_O();
+    LeftNav_US_O ln=new LeftNav_US_O();
 
     @Given("Navigate to Campus")
     public void navigateToCampus() {
@@ -31,17 +30,16 @@ public class US_3_HomeSteps {
     }
 
     @Given("Click on all buttons in the tab menu")
-    public void clickOnAllButtonsInTheTabMenu(DataTable tabMenuButtons)  {
+    public void clickOnAllButtonsInTheTabMenu(DataTable tabMenuButtons) {
         List<String> tabMenuButtonList=tabMenuButtons.asList(String.class);
 
         for (int i = 0; i < tabMenuButtonList.size(); i++) {
-            WebElement webElement = ln.getWebelement(tabMenuButtonList.get(i));
-            ln.myClick(webElement);
+            WebElement webElement = dc.getWebelement(tabMenuButtonList.get(i));
+            dc.myClick(webElement);
             new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
 
-
         }
-        GWD.quitDriver();
+
     }
 
 
