@@ -18,5 +18,5 @@ Feature: Messaging Functionality
 
     And Click on the element in Dialog
       | outboxButton |
-      | checkBox     |
-      | trashButton  |
+
+    And Click on the trash button

@@ -1,5 +1,6 @@
 package StepDefinitions.Login;
 
+import Pages.DialogContent_US_M;
 import Pages.LeftNav_US_M;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
@@ -11,24 +12,30 @@ import java.util.List;
 
 public class US_006_MessagingSteps {
 
-        LeftNav_US_M lfm = new LeftNav_US_M();
+    LeftNav_US_M lfm = new LeftNav_US_M();
+    DialogContent_US_M dcm = new DialogContent_US_M();
 
-        @And("Click on the element Top Menu")
-        public void clickOnTheElementTopMenu(DataTable button) {
-            List<String> textList = button.asList(String.class);
+    @And("Click on the element Top Menu")
+    public void clickOnTheElementTopMenu(DataTable button) {
+        List<String> textList = button.asList(String.class);
 
-            for (int i = 0; i < textList.size(); i++) {
-                WebElement buttonWebElement = lfm.getWebElement(textList.get(i));
-                lfm.myClick(buttonWebElement);
-            }
-        }
-
-        @And("Hover Over the messaging button")
-        public void hoverOverTheMessagingButton() {
-            Actions ActionDriver=new Actions(GWD.getDriver());
-
-            ActionDriver.moveToElement(lfm.messaging).build().perform();
+        for (int i = 0; i < textList.size(); i++) {
+            WebElement buttonWebElement = lfm.getWebElement(textList.get(i));
+            lfm.myClick(buttonWebElement);
         }
     }
+
+    @And("Hover Over the messaging button")
+    public void hoverOverTheMessagingButton(){
+        Actions ActionDriver = new Actions(GWD.getDriver());
+
+        ActionDriver.moveToElement(lfm.messaging).build().perform();
+    }
+
+    @And("Click on the trash button")
+    public void clickOnTheTrashButton() {
+        dcm.myClick(dcm.trashButton);
+    }
+}
 
 
