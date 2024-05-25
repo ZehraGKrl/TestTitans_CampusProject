@@ -1,21 +1,18 @@
 package StepDefinitions.Login;
 
 import Pages.DialogContent_US_001;
-import Pages.LeftNav_US_001;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 import java.util.List;
 
 public class US_001_LoginSteps {
 
     DialogContent_US_001 dcm = new DialogContent_US_001();
-    LeftNav_US_001 lfm = new LeftNav_US_001();
 
     @When("User sending the keys in Dialog")
     public void userSendingTheKeysInDialog(DataTable text) {

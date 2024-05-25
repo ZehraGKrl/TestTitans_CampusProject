@@ -23,7 +23,6 @@ public class LeftNav_US_006 extends ParentPage {
                 return this.hamburgerMenu;
         }
 
-
         return null;
     }
 }

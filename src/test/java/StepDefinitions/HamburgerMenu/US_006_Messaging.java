@@ -25,5 +25,7 @@ public class US_006_Messaging {
     @And("Hover Over the messaging button")
     public void hoverOverTheMessagingButton() {
         Actions ActionDriver=new Actions(GWD.getDriver());
+
+        ActionDriver.moveToElement(lfm.messaging).build().perform();
     }
 }
