@@ -32,7 +32,7 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(css = "body > app > student-layout > div > footer > user-messages-buttons > button-bar > div > div:nth-child(2) > ms-confirm-button > button > span.mdc-button__label > fa-icon")
     public WebElement trashButton;
 
-    @FindBy(css = "#mat-mdc-checkbox-6-input")
+    @FindBy(css = "#mat-mdc-checkbox-6 > div > div > div.mdc-checkbox__background > svg")
     public WebElement checkBox;
 
 
