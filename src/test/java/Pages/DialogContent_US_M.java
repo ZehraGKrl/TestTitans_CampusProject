@@ -29,6 +29,12 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//span[text()='Outbox']")
     public WebElement outboxButton;
 
+    @FindBy(css = "body > app > student-layout > div > footer > user-messages-buttons > button-bar > div > div:nth-child(2) > ms-confirm-button > button > span.mdc-button__label > fa-icon")
+    public WebElement trashButton;
+
+    @FindBy(css = "#mat-mdc-checkbox-6-input")
+    public WebElement checkBox;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
@@ -37,9 +43,13 @@ public class DialogContent_US_M extends ParentPage {
             case "passwordInput":
                 return this.password;
             case "loginButton":
-                return  this.loginButton;
+                return this.loginButton;
             case "outboxButton":
                 return this.outboxButton;
+            case "trashButton":
+                return this.trashButton;
+            case "checkBox":
+                return this.checkBox;
 
         }
         return null;

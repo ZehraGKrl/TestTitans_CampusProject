@@ -1,4 +1,4 @@
-package StepDefinitions.US_M;
+package StepDefinitions.Login;
 
 import Pages.LeftNav_US_M;
 import Utilities.GWD;
@@ -11,7 +11,6 @@ import java.util.List;
 
 public class US_006_MessagingSteps {
 
-    public class US_006_Messaging {
         LeftNav_US_M lfm = new LeftNav_US_M();
 
         @And("Click on the element Top Menu")
@@ -32,4 +31,4 @@ public class US_006_MessagingSteps {
         }
     }
 
-}
+
