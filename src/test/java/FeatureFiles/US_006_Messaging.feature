@@ -17,6 +17,7 @@ Feature: Messaging Functionality
     And Hover Over the messaging button
 
     And Click on the element in Dialog
-      | outboxButton |
+      | outboxButton  |
+      | trashButton   |
+      | confirmButton |
 
-    And Click on the trash button

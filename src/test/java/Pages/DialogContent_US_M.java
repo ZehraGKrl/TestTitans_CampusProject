@@ -29,8 +29,11 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//span[text()='Outbox']")
     public WebElement outboxButton;
 
-    @FindBy(css = "(//span[@class='mat-ripple mat-mdc-button-ripple'])[10]")
+    @FindBy(xpath = "((//tbody/tr/td)[6])/div/ms-confirm-button")
     public WebElement trashButton;
+
+    @FindBy(xpath = "//span[text()=' Yes ']")
+    public WebElement confirmButton;
 
 
     public WebElement getWebElement(String strElement) {
@@ -45,6 +48,8 @@ public class DialogContent_US_M extends ParentPage {
                 return this.outboxButton;
             case "trashButton":
                 return this.trashButton;
+            case "confirmButton":
+                return this.confirmButton;
 
         }
         return null;
