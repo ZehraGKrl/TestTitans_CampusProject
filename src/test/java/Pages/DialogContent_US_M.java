@@ -35,6 +35,9 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//span[text()=' Yes ']")
     public WebElement confirmButton;
 
+    @FindBy(css = "[class='mat-expansion-panel-header-description ng-star-inserted'] div")
+    public WebElement confirmMessage;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {

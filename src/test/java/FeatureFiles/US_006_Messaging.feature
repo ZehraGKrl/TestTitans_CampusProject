@@ -21,3 +21,5 @@ Feature: Messaging Functionality
       | trashButton   |
       | confirmButton |
 
+    And Confirm message should be displayed
+

@@ -50,6 +50,11 @@ public class US_006_MessagingSteps extends ParentPage {
             lfm.myClick(buttonWebElement);
         }
     }
+
+    @And("Confirm message should be displayed")
+    public void confirmMessageShouldBeDisplayed() {
+
+    }
 }
 
 
