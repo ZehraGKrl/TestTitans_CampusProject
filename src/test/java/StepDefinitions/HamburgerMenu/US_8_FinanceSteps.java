@@ -5,6 +5,7 @@ import Pages.LeftNav_US_O;
 import Utilities.GWD;
 import Utilities.ParentPage;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -38,10 +39,17 @@ public class US_8_FinanceSteps extends ParentPage {
         }
 
     }
-    @Then("Make payment in My finance section")
-    public void makePaymentInMyFinanceSection(DataTable paymentButtons){
-        List<String> paymentButtonList = paymentButtons.asList(String.class);
 
+    @Then("Click on the my finance button")
+    public void clickOnTheMyFinanceButton() {
+        wait.until(ExpectedConditions.visibilityOf(dc.myFinanceButton));
+        dc.myClick(dc.myFinanceButton);
+    }
+
+
+    @And("Make payment in My finance section")
+    public void makePaymentInMyFinanceSection( DataTable paymentButtons) {
+        List<String> paymentButtonList = paymentButtons.asList(String.class);
         for (int i = 0; i < paymentButtonList.size(); i++) {
             WebElement webElement = dc.getWebelement(paymentButtonList.get(i));
             dc.myClick(webElement);
@@ -49,6 +57,4 @@ public class US_8_FinanceSteps extends ParentPage {
         }
         GWD.quitDriver();
     }
-
-
 }
