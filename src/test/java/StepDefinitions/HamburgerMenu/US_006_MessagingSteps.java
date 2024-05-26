@@ -53,7 +53,10 @@ public class US_006_MessagingSteps extends ParentPage {
 
     @And("Confirm message should be displayed")
     public void confirmMessageShouldBeDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(dcm.confirmMessage));
+        dcm.verifyContainsText(dcm.confirmMessage, "Message successfully moved to trash!");
 
+        GWD.quitDriver();
     }
 }
 
