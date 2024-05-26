@@ -16,13 +16,15 @@ Feature: Home Tab Menu Functionality
         |moreButton|
         |chatButtonOpen|
         |closeButton|
-        |newMessageButton|
+        |newMessageButtonOpen|
         |closeButton|
-        |profileSetingsButton|
+        |profileSettingsButton|
 
       Examples:
         | username | password |
         | Student_7 | S12345 |
+
+
 
 
 

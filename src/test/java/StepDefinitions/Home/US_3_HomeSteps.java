@@ -34,12 +34,13 @@ public class US_3_HomeSteps {
         List<String> tabMenuButtonList=tabMenuButtons.asList(String.class);
 
         for (int i = 0; i < tabMenuButtonList.size(); i++) {
-            WebElement webElement = dc.getWebelement(tabMenuButtonList.get(i));
-            dc.myClick(webElement);
+            WebElement webElement = ln.getWebelement(tabMenuButtonList.get(i));
+            ln.myClick(webElement);
             new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
 
         }
 
+        GWD.quitDriver();
     }
 
 

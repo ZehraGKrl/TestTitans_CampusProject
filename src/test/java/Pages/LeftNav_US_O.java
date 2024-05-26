@@ -32,12 +32,12 @@ public class LeftNav_US_O extends ParentPage {
     public WebElement moreButton;
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[7]")
     public WebElement chatButtonOpen;
-    @FindBy(css = "[data-icon='square-xmark'] path")
+    @FindBy(xpath = "(//simple-dialog-title//* [@class='mat-mdc-focus-indicator'])[2]")
     public WebElement closeButton;
-    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[8]")
+    @FindBy(css = "user-message-bell div+span")
     public WebElement newMessageButtonOpen;
-    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[9]")
-    public WebElement profileSetingsButton;
+    @FindBy(css = "[class='svg-inline--fa fa-angle-down fa-fw']")
+    public WebElement profileSettingsButton;
 
     public WebElement getWebelement(String element){
 
@@ -61,8 +61,8 @@ public class LeftNav_US_O extends ParentPage {
                 return this.closeButton;
             case "newMessageButtonOpen":
                 return this.newMessageButtonOpen;
-            case "profileSetingsButton":
-                return this.profileSetingsButton;
+            case "profileSettingsButton":
+                return this.profileSettingsButton;
 
         }
         return null;

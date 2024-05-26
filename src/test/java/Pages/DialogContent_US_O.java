@@ -16,12 +16,12 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement financeButton;
     @FindBy(xpath = "//span[text()='My Finance']")
     public WebElement myFinanceButton;
-    @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
-    public WebElement moreButton;
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[18]")
     public WebElement viewButton;
     @FindBy(css = "(//div[@class='mdc-radio__background'])[1]")
     public WebElement stripeButton;
+    @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
+    public WebElement moreButton;
 
 
 public WebElement getWebelement(String element){

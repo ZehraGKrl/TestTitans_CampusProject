@@ -3,18 +3,22 @@ package StepDefinitions.HamburgerMenu;
 import Pages.DialogContent_US_O;
 import Pages.LeftNav_US_O;
 import Utilities.GWD;
+import Utilities.ParentPage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
-public class US_8_FinanceSteps {
+public class US_8_FinanceSteps extends ParentPage {
 
     DialogContent_US_O dc=new DialogContent_US_O();
     LeftNav_US_O ln=new LeftNav_US_O();
+
+
 
     @Given("Enter username and password and click login button")
     public void enterUsernameAndPasswordAndClickLoginButton() {
@@ -30,8 +34,6 @@ public class US_8_FinanceSteps {
         for (int i = 0; i < financeButtonList.size(); i++) {
             WebElement webElement =dc.getWebelement(financeButtonList.get(i));
             dc.myClick(webElement);
-            Thread.sleep(1000);
-
 
         }
 
