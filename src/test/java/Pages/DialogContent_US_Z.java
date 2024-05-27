@@ -20,17 +20,23 @@ public class DialogContent_US_Z extends ParentPage {
     public WebElement companyLogo;
     @FindBy(xpath = "//*[text()='Messaging']")
     public WebElement msgButton;
-
+    @FindBy(xpath = "//*[text()='Trash']")
+    public WebElement trashButton;
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[21]")
+    public WebElement trashIcon;
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[20]")
+    public WebElement restoreIcon;
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "msgButton":
                 return this.msgButton;
+            case "trashButton":
+                return this.trashButton;
         }
 
         return null;
     }
-
 
 
 }
