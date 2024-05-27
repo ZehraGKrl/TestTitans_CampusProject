@@ -16,11 +16,20 @@ public class DialogContent_US_Z extends ParentPage {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-
     @FindBy(xpath = "//div[@class='ng-star-inserted']/img")
     public WebElement companyLogo;
+    @FindBy(xpath = "//*[text()='Messaging']")
+    public WebElement msgButton;
 
 
+    public WebElement getWebElement(String strElement) {
+        switch (strElement) {
+            case "msgButton":
+                return this.msgButton;
+        }
+
+        return null;
+    }
 
 
 
