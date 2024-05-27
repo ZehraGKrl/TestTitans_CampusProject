@@ -2,10 +2,10 @@ Feature: Home Functionality
   Background:
     Given  Navigate to Campus
     When User sending the keys in Dialog
-      | username | Student_7 |
-      | password | S12345    |
+      | usernameInput | Student_7 |
+      | passwordInput | S12345    |
     Then Click on the element in Dialog
-      | login |
+      | loginButton |
     And Main page should be displayed
 
     Scenario: Home Functionality
