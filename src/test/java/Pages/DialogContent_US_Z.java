@@ -22,21 +22,14 @@ public class DialogContent_US_Z extends ParentPage {
     public WebElement msgButton;
     @FindBy(xpath = "//*[text()='Trash']")
     public WebElement trashButton;
-    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[21]")
+    @FindBy(xpath = "//ms-delete-button//button")
     public WebElement trashIcon;
-    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[20]")
+    @FindBy(xpath = "//ms-standard-button[@icon='trash-restore']")
     public WebElement restoreIcon;
+    @FindBy(xpath = "//div[contains(text(),'successfully')]")
+    public WebElement successMessage;
 
-    public WebElement getWebElement(String strElement) {
-        switch (strElement) {
-            case "msgButton":
-                return this.msgButton;
-            case "trashButton":
-                return this.trashButton;
-        }
 
-        return null;
-    }
 
 
 }

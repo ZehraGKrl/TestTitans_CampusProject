@@ -15,3 +15,4 @@ Feature: Home Functionality
     And Hover Over the messaging button
     And Click on the trash button in hamburger menu "trashButton"
     Then The trash and restore icon should be visible
+    And Click on the restore button and see the success message
