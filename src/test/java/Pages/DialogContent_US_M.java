@@ -57,5 +57,4 @@ public class DialogContent_US_M extends ParentPage {
         }
         return null;
     }
-
 }
