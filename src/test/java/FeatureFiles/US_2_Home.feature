@@ -8,7 +8,7 @@ Feature: Home Functionality
       | loginButton |
     And Main page should be displayed
 
-    Scenario: Home Functionality
+    Scenario: User should click to the company logo
       And User should see the company logo at the left upper corner
       When User should click the company logo at the left upper corner
       Then A new tab should open

@@ -38,7 +38,7 @@ import java.util.List;
         public void mainPageShouldBeDisplayed() {
             dcm.verifyContainsText(dcm.courses, "Courses");
 
-            GWD.quitDriver();
+            //GWD.quitDriver();
         }
     }
 

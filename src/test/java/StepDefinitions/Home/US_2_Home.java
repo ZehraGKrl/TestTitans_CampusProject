@@ -12,10 +12,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Set;
 
 public class US_2_Home extends ParentPage {
     DialogContent_US_Z dcz= new DialogContent_US_Z();
-    WebDriver driver;
+
 
     @And("User should see the company logo at the left upper corner")
     public void userShouldSeeTheCompanyLogoAtTheLeftUpperCorner() {
@@ -31,17 +33,25 @@ public class US_2_Home extends ParentPage {
 
     @Then("A new tab should open")
     public void aNewTabShouldOpen() {
-        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
-        Assert.assertEquals(2, tabs.size());
+
+        wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+        Set<String> tabs = GWD.getDriver().getWindowHandles();
+        Iterator gosterge = tabs.iterator();
+        String firstTabId = gosterge.next().toString();
+        String secondTabId = gosterge.next().toString();
+        GWD.getDriver().switchTo().window(secondTabId);
     }
 
 
     @Then("User should redirected to {string}")
     public void userShouldRedirectedTo(String expectedUrl) {
-        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
-        String actualUrl = driver.getCurrentUrl();
+        ArrayList<String> tabs = new ArrayList<>(GWD.getDriver().getWindowHandles());
+        GWD.getDriver().switchTo().window(tabs.get(1));
+        wait.until(ExpectedConditions.urlToBe(expectedUrl));
+        String actualUrl = GWD.getDriver().getCurrentUrl();
         Assert.assertEquals(expectedUrl, actualUrl);
-
+        GWD.quitDriver();
     }
+
+
 }
