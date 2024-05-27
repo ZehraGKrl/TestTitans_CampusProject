@@ -1,7 +1,7 @@
 package StepDefinitions.Home;
 
-import Pages.DialogContent_US_3;
-import Pages.LeftNav_US_3;
+import Pages.DialogContent_US_O;
+import Pages.LeftNav_US_O;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -10,12 +10,12 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import javax.swing.*;
 import java.util.List;
 
 public class US_3_HomeSteps {
 
-    DialogContent_US_3 dc=new DialogContent_US_3();
+    DialogContent_US_O dc=new DialogContent_US_O();
+    LeftNav_US_O ln=new LeftNav_US_O();
 
     @Given("Navigate to Campus")
     public void navigateToCampus() {
@@ -24,9 +24,9 @@ public class US_3_HomeSteps {
 
     @When("Enter username {string} and password {string} and click login button")
     public void enterUsernameAndPasswordAndClickLoginButton(String username, String password) {
-        dc.mySendKeys(dc.username, username);
-        dc.mySendKeys(dc.password, password);
-        dc.myClick(dc.loginButton);
+        ln.mySendKeys(ln.username, username);
+        ln.mySendKeys(ln.password, password);
+        ln.myClick(ln.loginButton);
     }
 
     @Given("Click on all buttons in the tab menu")
@@ -34,12 +34,13 @@ public class US_3_HomeSteps {
         List<String> tabMenuButtonList=tabMenuButtons.asList(String.class);
 
         for (int i = 0; i < tabMenuButtonList.size(); i++) {
-            WebElement webElement = dc.getWebelement(tabMenuButtonList.get(i));
-            dc.myClick(webElement);
+            WebElement webElement = ln.getWebelement(tabMenuButtonList.get(i));
+            ln.myClick(webElement);
             new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
 
         }
 
+        GWD.quitDriver();
     }
 
 

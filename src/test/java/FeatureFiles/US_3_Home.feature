@@ -14,13 +14,17 @@ Feature: Home Tab Menu Functionality
         |assignmentButton|
         |gradingButton|
         |moreButton|
-        |chatButton|
-        |newMessageButton|
-        |profileSetingsButton|
+        |chatButtonOpen|
+        |closeButton|
+        |newMessageButtonOpen|
+        |closeButton|
+        |profileSettingsButton|
 
       Examples:
         | username | password |
         | Student_7 | S12345 |
+
+
 
 
 

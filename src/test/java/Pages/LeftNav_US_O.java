@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class DialogContent_US_3 extends ParentPage {
+public class LeftNav_US_O extends ParentPage {
 
-    public DialogContent_US_3() {
+    public LeftNav_US_O() {
         PageFactory.initElements(GWD.getDriver(),this);
     }
 
@@ -28,14 +28,16 @@ public class DialogContent_US_3 extends ParentPage {
     public WebElement assignmentButton;
     @FindBy(xpath = "//span[text()='Grading']")
     public WebElement gradingButton;
-    @FindBy(css = "[class='svg-inline--fa fa-bars fa-fw']")
+    @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
     public WebElement moreButton;
-    @FindBy(css = "[class='mat-mdc-tooltip-trigger mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base mat-mdc-tooltip-disabled']>:nth-child(3)")
-    public WebElement chatButton;
-    @FindBy(xpath = "(//span[@class='mat-ripple mat-mdc-button-ripple'])[2]")
-    public WebElement newMessageButton;
-    @FindBy(css = "[class='username mr-12']")
-    public WebElement profileSetingsButton;
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[7]")
+    public WebElement chatButtonOpen;
+    @FindBy(xpath = "(//simple-dialog-title//* [@class='mat-mdc-focus-indicator'])[2]")
+    public WebElement closeButton;
+    @FindBy(css = "user-message-bell div+span")
+    public WebElement newMessageButtonOpen;
+    @FindBy(css = "[class='svg-inline--fa fa-angle-down fa-fw']")
+    public WebElement profileSettingsButton;
 
     public WebElement getWebelement(String element){
 
@@ -53,12 +55,14 @@ public class DialogContent_US_3 extends ParentPage {
                 return this.gradingButton;
             case "moreButton":
                 return this.moreButton;
-            case "chatButton":
-                return this.chatButton;
-            case "newMessageButton":
-                return this.newMessageButton;
-            case "profileSetingsButton":
-                return this.profileSetingsButton;
+            case "chatButtonOpen":
+                return this.chatButtonOpen;
+            case "closeButton":
+                return this.closeButton;
+            case "newMessageButtonOpen":
+                return this.newMessageButtonOpen;
+            case "profileSettingsButton":
+                return this.profileSettingsButton;
 
         }
         return null;
