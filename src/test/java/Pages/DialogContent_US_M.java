@@ -11,7 +11,7 @@ public class DialogContent_US_M extends ParentPage {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(css = "[placeholder='Kullanıcı Adı']")
+    @FindBy(css = "[id='mat-input-0']")
     public WebElement username;
 
     @FindBy(css = "[formcontrolname='password']")
