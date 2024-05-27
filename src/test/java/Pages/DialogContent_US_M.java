@@ -17,7 +17,7 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(css = "[formcontrolname='password']")
     public WebElement password;
 
-    @FindBy(xpath = "//span[@class='mat-mdc-button-persistent-ripple mdc-button__ripple']")
+    @FindBy(css = "[class='mdc-button__label']")
     public WebElement loginButton;
 
     @FindBy(css = "[class='mat-expansion-panel-header-description ng-star-inserted']")
