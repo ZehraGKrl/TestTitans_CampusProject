@@ -8,3 +8,4 @@ Feature: Attendance Functionality
       Given Click on Attendance and attendance excuse
 
       When Enter excuse for class attendance
+
