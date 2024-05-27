@@ -25,6 +25,7 @@ public class DialogContent_US_Z extends ParentPage {
     public WebElement companyLogo;
 
 
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "username":
