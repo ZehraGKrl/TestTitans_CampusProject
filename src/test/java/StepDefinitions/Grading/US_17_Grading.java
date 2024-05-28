@@ -33,13 +33,13 @@ public class US_17_Grading extends ParentPage {
             robot.delay(500);
 
         }
-        robot.keyPress(KeyEvent.VK_ENTER); // tuşa bastım
+        robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
         robot.delay(2000);
         myUploadFile("D:\\TECHNO STUDY\\campus");
 
         robot.delay(1000);
-        robot.keyPress(KeyEvent.VK_ENTER); // tuşa bastım
+        robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
 
     }

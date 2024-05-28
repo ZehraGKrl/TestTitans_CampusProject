@@ -29,4 +29,10 @@ public class US_12_Hamburger_Finance extends ParentPage {
     }
 
 
+    @And("Click on the pull down menu button and click the pdf export")
+    public void clickOnThePullDownMenuButtonAndClickThePdfExport() {
+        dcz.myJSClick(dcz.pulldownMenu);
+        wait.until(ExpectedConditions.elementToBeClickable(dcz.pdfExport));
+        dcz.myClick(dcz.pdfExport);
+    }
 }
