@@ -42,7 +42,8 @@ public class DialogContent_US_Z extends ParentPage {
     public WebElement grading;
     @FindBy(xpath = "(//span[text()=' Student Transcript '])")
     public WebElement transcript;
-
+    @FindBy(xpath = "//button[normalize-space(.)='Print']")
+    public WebElement print;
 
 
 

@@ -10,4 +10,7 @@ Feature: Grading Functionality
     And Main page should be displayed
 
     Scenario: Student should be able to download detailed course grades and transcript
-      When Click the grading and student transcript button
+      When Click the grading transcript and print buttons
+      And A new tab should open
+      And Click on the download button on the new tab
+
