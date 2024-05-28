@@ -1,4 +1,4 @@
-Feature: Home Functionality
+Feature: Messaging Functionality
 
   Background:
     Given  Navigate to Campus
@@ -12,6 +12,8 @@ Feature: Home Functionality
   Scenario: User should delete and restore the messages
     When Click on the element Top Menu
       | hamburgerMenu |
-    And Click on the element in Dialog
-      | msgButton   |
-      | trashButton |
+    And Hover Over the messaging button
+    And Click on the trash button in hamburger menu "trashButton"
+    Then The trash and restore icon should be visible
+    And Click on the restore button and see the success message
+    And Click on the delete button and see the success message

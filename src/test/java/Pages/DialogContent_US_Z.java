@@ -18,18 +18,32 @@ public class DialogContent_US_Z extends ParentPage {
 
     @FindBy(xpath = "//div[@class='ng-star-inserted']/img")
     public WebElement companyLogo;
-    @FindBy(xpath = "//*[text()='Messaging']")
-    public WebElement msgButton;
-
-
-    public WebElement getWebElement(String strElement) {
-        switch (strElement) {
-            case "msgButton":
-                return this.msgButton;
-        }
-
-        return null;
-    }
+    @FindBy(xpath = "//*[text()='Trash']")
+    public WebElement trashButton;
+    @FindBy(xpath = "//ms-delete-button//button")
+    public WebElement trashIcon;
+    @FindBy(xpath = "//ms-standard-button[@icon='trash-restore']")
+    public WebElement restoreIcon;
+    @FindBy(xpath = "//div[contains(text(),'successfully')]")
+    public WebElement successMessage;
+    @FindBy(xpath = "//*[text()=' Delete ']")
+    public WebElement delete;
+    @FindBy(xpath = "//span[text()='Finance']")
+    public WebElement finance;
+    @FindBy(xpath = "//span[text()='My Finance']")
+    public WebElement myFinance;
+    @FindBy(xpath = "(//button[contains(@class, 'mat-mdc-menu-trigger')])[7]")
+    public WebElement pulldownMenu;
+    @FindBy(xpath = "//span[text()=' Excel Export ']")
+    public WebElement excelExport;
+    @FindBy(xpath = "//span[text()=' Pdf Export ']")
+    public WebElement pdfExport;
+    @FindBy(xpath = "(//span[text()='Grading'])[1]")
+    public WebElement grading;
+    @FindBy(xpath = "(//span[text()=' Student Transcript '])")
+    public WebElement transcript;
+    @FindBy(xpath = "//button[normalize-space(.)='Print']")
+    public WebElement print;
 
 
 
