@@ -36,6 +36,12 @@ public class DialogContent_US_Z extends ParentPage {
     public WebElement pulldownMenu;
     @FindBy(xpath = "//span[text()=' Excel Export ']")
     public WebElement excelExport;
+    @FindBy(xpath = "//span[text()=' Pdf Export ']")
+    public WebElement pdfExport;
+    @FindBy(xpath = "(//span[text()='Grading'])[1]")
+    public WebElement grading;
+    @FindBy(xpath = "(//span[text()=' Student Transcript '])")
+    public WebElement transcript;
 
 
 
