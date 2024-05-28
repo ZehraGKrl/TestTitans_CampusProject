@@ -4,6 +4,7 @@ import Pages.DialogContent_US_O;
 import Pages.LeftNav_US_O;
 import Utilities.ParentPage;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -30,17 +31,22 @@ public class US_13_Attendance_FeatureSteps extends ParentPage {
     }
 
     @When("Enter an excuse")
-    public void enterAnExcuse(DataTable excuseButtons) {
-        List<String> excuseButtonList = excuseButtons.asList(String.class);
-
-        for (int i = 0; i < excuseButtonList.size(); i++) {
-            WebElement webElement =dc.getWebelement(excuseButtonList.get(i));
-            dc.myClick(webElement);
-
-        }
+    public void enterAnExcuse() {
+        wait.until(ExpectedConditions.visibilityOf(dc.addButon));
+        dc.myJSClick(dc.addButon);
+        dc.myClick(dc.attendanceCalendarButton);
+        dc.hoverOver(dc.dateButton);
+        dc.myClick(dc.dateButton);
+        dc.mySendKeys(dc.messageButton,"Cenazemiz var :D");
 
     }
 
 
+    @And("The user uploads and sends a health report or a file upon request")
+    public void theUserUploadsAndSendsAHealthReportOrAFileUponRequest() {
+        dc.myClick(dc.attachFilesButton);
+        dc.myClick(dc.fromLocalButton);
 
+
+    }
 }
