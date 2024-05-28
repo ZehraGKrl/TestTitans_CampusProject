@@ -32,10 +32,11 @@ public class DialogContent_US_Z extends ParentPage {
     public WebElement finance;
     @FindBy(xpath = "//span[text()='My Finance']")
     public WebElement myFinance;
-    @FindBy(xpath = "(//span[@class='mat-ripple mat-mdc-button-ripple'])[6]")
+    @FindBy(xpath = "(//button[contains(@class, 'mat-mdc-menu-trigger')])[7]")
     public WebElement pulldownMenu;
-    @FindBy(xpath = "//span[text()=' Pdf Export ']")
-    public WebElement pdfExport;
+    @FindBy(xpath = "//span[text()=' Excel Export ']")
+    public WebElement excelExport;
+
 
 
 
