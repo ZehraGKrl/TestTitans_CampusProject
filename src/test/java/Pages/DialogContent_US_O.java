@@ -18,7 +18,7 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement myFinanceButton;
     @FindBy(css = "ms-standard-button button fa-icon+span")
     public WebElement viewButton;
-    @FindBy(xpath = "//input[@value='STRIPE']")
+    @FindBy(xpath = "[class='mat-mdc-radio-button mat-accent ng-star-inserted']>div>div>div+input")
     public WebElement stripeButton;
     @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
     public WebElement moreButton;
