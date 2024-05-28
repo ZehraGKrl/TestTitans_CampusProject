@@ -10,5 +10,6 @@ Feature: Attendance Functionality
     When Click on the attendance excuse button
     Then Enter an excuse
     And The user uploads and sends a health report or a file upon request
+    And Check the accuracy of the received message.
 
 

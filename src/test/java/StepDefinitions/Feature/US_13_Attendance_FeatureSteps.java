@@ -10,6 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -43,10 +44,20 @@ public class US_13_Attendance_FeatureSteps extends ParentPage {
 
 
     @And("The user uploads and sends a health report or a file upon request")
-    public void theUserUploadsAndSendsAHealthReportOrAFileUponRequest() {
+    public void theUserUploadsAndSendsAHealthReportOrAFileUponRequest() throws InterruptedException {
         dc.myClick(dc.attachFilesButton);
         dc.myClick(dc.fromLocalButton);
+        dc.myUploadFile("C:\\Users\\ozi_9\\Süngerbob.jpg");
+        dc.myClick(dc.sendButton);
 
 
     }
-}
+
+    @And("Check the accuracy of the received message.")
+    public void checkTheAccuracyOfTheReceivedMessage() {
+
+        wait.until(ExpectedConditions.visibilityOf(dc.successMessage));
+            Assert.assertTrue(dc.successMessage.isDisplayed(), "No message is present!");
+        }
+    }
+

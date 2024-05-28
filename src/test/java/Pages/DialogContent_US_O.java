@@ -38,6 +38,10 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement attachFilesButton;
     @FindBy(css = "[class='mat-mdc-menu-item mat-mdc-focus-indicator mat-badge mat-badge-accent mat-badge-below mat-badge-after mat-badge-small mat-badge-hidden ng-star-inserted']>span")
     public WebElement fromLocalButton;
+    @FindBy(css = "[class='mat-badge mdc-button mat-mdc-button mat-badge-accent mat-mdc-button-base mat-accent mat-badge-above mat-badge-after mat-badge-small mat-badge-hidden ng-star-inserted mat-mdc-raised-button mdc-button--raised']>span>span")
+    public WebElement sendButton;
+    @FindBy(xpath = "//*[contains(text(),'Attendance Excuse successfully sent')]")
+    public WebElement successMessage;
 
 
 public WebElement getWebelement(String element){
