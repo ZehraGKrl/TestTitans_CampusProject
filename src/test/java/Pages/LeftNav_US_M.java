@@ -11,7 +11,7 @@ public class LeftNav_US_M extends ParentPage {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
+    @FindBy(css = "[class='svg-inline--fa fa-bars fa-fw']")
     public WebElement hamburgerMenu;
 
     @FindBy(xpath = "//span[text()='Messaging']")

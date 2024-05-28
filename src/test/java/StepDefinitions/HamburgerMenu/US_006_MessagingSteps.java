@@ -22,6 +22,7 @@ public class US_006_MessagingSteps extends ParentPage {
 
     @And("Hover Over the messaging button")
     public void hoverOverTheMessagingButton() {
+        wait.until(ExpectedConditions.visibilityOf(lfm.messaging));
         Actions ActionDriver = new Actions(GWD.getDriver());
 
         ActionDriver.moveToElement(lfm.messaging).build().perform();
