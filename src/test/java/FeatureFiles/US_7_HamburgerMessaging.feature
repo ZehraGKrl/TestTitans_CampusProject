@@ -1,4 +1,4 @@
-Feature: Home Functionality
+Feature: Messaging Functionality
 
   Background:
     Given  Navigate to Campus
@@ -16,3 +16,4 @@ Feature: Home Functionality
     And Click on the trash button in hamburger menu "trashButton"
     Then The trash and restore icon should be visible
     And Click on the restore button and see the success message
+    And Click on the delete button and see the success message

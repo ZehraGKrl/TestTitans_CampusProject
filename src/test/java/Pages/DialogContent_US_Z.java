@@ -18,8 +18,6 @@ public class DialogContent_US_Z extends ParentPage {
 
     @FindBy(xpath = "//div[@class='ng-star-inserted']/img")
     public WebElement companyLogo;
-    @FindBy(xpath = "//*[text()='Messaging']")
-    public WebElement msgButton;
     @FindBy(xpath = "//*[text()='Trash']")
     public WebElement trashButton;
     @FindBy(xpath = "//ms-delete-button//button")
@@ -28,8 +26,8 @@ public class DialogContent_US_Z extends ParentPage {
     public WebElement restoreIcon;
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     public WebElement successMessage;
-
-
+    @FindBy(xpath = "//*[text()=' Delete ']")
+    public WebElement delete;
 
 
 }
