@@ -47,5 +47,11 @@ public class ParentPage {
 
     }
 
+    public void hoverOver(WebElement element) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+        scrollToElement(element);
+        new Actions(GWD.getDriver()).moveToElement(element).build().perform();
+    }
+
 
 }

@@ -1,16 +1,46 @@
 package StepDefinitions.Feature;
 
+import Pages.DialogContent_US_O;
+import Pages.LeftNav_US_O;
+import Utilities.ParentPage;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class US_13_Attendance_FeatureSteps {
-    @Given("Click on the attendance button and attendance excuse button")
+import java.util.List;
+
+public class US_13_Attendance_FeatureSteps extends ParentPage {
+
+    DialogContent_US_O dc=new DialogContent_US_O();
+    LeftNav_US_O ln=new LeftNav_US_O();
+    @Given("Click on the attendance button")
     public void clickOnTheAttendanceButtonAndAttendanceExcuseButton() {
+        wait.until(ExpectedConditions.urlToBe("https://test.mersys.io/user-courses"));
+        dc.myClick(dc.attendanceButton);
 
+    }
+
+    @When("Click on the attendance excuse button")
+    public void clickOnTheAttendanceExcuseButton() {
+        wait.until(ExpectedConditions.visibilityOf(dc.attendanceExcuseButton));
+        dc.myJSClick(dc.attendanceExcuseButton);
     }
 
     @When("Enter an excuse")
-    public void enterAnExcuse() {
+    public void enterAnExcuse(DataTable excuseButtons) {
+        List<String> excuseButtonList = excuseButtons.asList(String.class);
+
+        for (int i = 0; i < excuseButtonList.size(); i++) {
+            WebElement webElement =dc.getWebelement(excuseButtonList.get(i));
+            dc.myClick(webElement);
+
+        }
 
     }
+
+
+
 }
