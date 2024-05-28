@@ -56,7 +56,7 @@ public class ParentPage {
         new Actions(GWD.getDriver()).moveToElement(element).build().perform();
     }
 
-    public void myUploadFile(String pathFile){
+    public void myUploadFile(String pathFile) {
 
         Robot robot;
 
@@ -71,26 +71,22 @@ public class ParentPage {
         StringSelection createPathFile = new StringSelection(pathFile);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(createPathFile, null);
 
-        wait(1);
+        robot.delay(1000);
         robot.keyPress(KeyEvent.VK_CONTROL);
         robot.keyPress(KeyEvent.VK_V);
 
         robot.keyRelease(KeyEvent.VK_V);
         robot.keyRelease(KeyEvent.VK_CONTROL);
 
-        wait(1);
+        robot.delay(1000);
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
-        wait(1);
-
+        robot.delay(1000);
 
     }
 
 
-
-
-
-    public static void wait(int sn){
+    public static void wait(int sn) {
 
         try {
             Thread.sleep(sn * 1000);
