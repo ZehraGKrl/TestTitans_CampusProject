@@ -22,6 +22,12 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement stripeButton;
     @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
     public WebElement moreButton;
+    @FindBy(xpath = "//span[text()='Attendance']")
+    public WebElement attendanceButton;
+    @FindBy(xpath = "(//div[@class='mat-mdc-tab-label-container']//div)[8]")
+    public WebElement attendanceExcuseButton;
+    @FindBy(css = "[class='mat-mdc-tooltip-trigger mat-badge mdc-icon-button mat-mdc-icon-button mat-badge-accent mat-unthemed mat-mdc-button-base mat-badge-below mat-badge-after mat-badge-small mat-badge-hidden ng-star-inserted']>:nth-child(2)+span")
+    public WebElement addButon;
 
 
 public WebElement getWebelement(String element){
@@ -38,6 +44,12 @@ public WebElement getWebelement(String element){
             return this.viewButton;
         case "stripeButton":
             return this.stripeButton;
+        case "attendanceButton":
+            return this.attendanceButton;
+        case "attendanceExcuseButton":
+            return this.attendanceExcuseButton;
+        case "addButon":
+            return this.addButon;
 
     }
     return null;

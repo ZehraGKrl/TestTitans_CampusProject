@@ -4,7 +4,13 @@ Feature: Attendance Functionality
     Given Navigate to Campus
     When Enter username and password and click login button
 
-    Scenario: Entering a class attendance excuse in the attendance section
-    Given Click on the attendance button and attendance excuse button
+  Scenario: Entering a class attendance excuse in the attendance section
 
-      When Enter an excuse
+    Given Click on the attendance button
+      | attendanceButton |
+
+    When Click on the attendance excuse button
+
+    Then Enter an excuse
+      | addButon |
+
