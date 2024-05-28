@@ -86,6 +86,10 @@ public class ParentPage {
 
     }
 
+
+
+
+
     public static void wait(int sn){
 
         try {
