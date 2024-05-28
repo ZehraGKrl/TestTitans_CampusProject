@@ -17,20 +17,15 @@ public class US_13_Attendance_FeatureSteps extends ParentPage {
     DialogContent_US_O dc=new DialogContent_US_O();
     LeftNav_US_O ln=new LeftNav_US_O();
     @Given("Click on the attendance button")
-    public void clickOnTheAttendanceButtonAndAttendanceExcuseButton(DataTable attendanceButtons) {
-        List<String> attendanceButtonlist = attendanceButtons.asList(String.class);
+    public void clickOnTheAttendanceButtonAndAttendanceExcuseButton() {
+        wait.until(ExpectedConditions.urlToBe("https://test.mersys.io/user-courses"));
+        dc.myClick(dc.attendanceButton);
 
-        for (int i = 0; i < attendanceButtonlist.size(); i++) {
-            WebElement webElement =dc.getWebelement(attendanceButtonlist.get(i));
-            dc.myClick(webElement);
-
-        }
     }
 
     @When("Click on the attendance excuse button")
     public void clickOnTheAttendanceExcuseButton() {
-
-        wait.until(ExpectedConditions.urlToBe("https://test.mersys.io/student-attendance"));
+        wait.until(ExpectedConditions.visibilityOf(dc.attendanceExcuseButton));
         dc.myJSClick(dc.attendanceExcuseButton);
     }
 

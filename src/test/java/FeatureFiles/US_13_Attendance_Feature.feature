@@ -7,10 +7,10 @@ Feature: Attendance Functionality
   Scenario: Entering a class attendance excuse in the attendance section
 
     Given Click on the attendance button
-      | attendanceButton |
 
     When Click on the attendance excuse button
 
     Then Enter an excuse
       | addButon |
+      | AttendanceCalendarButton |
 

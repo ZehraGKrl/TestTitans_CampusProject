@@ -28,6 +28,10 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement attendanceExcuseButton;
     @FindBy(css = "[class='mat-mdc-tooltip-trigger mat-badge mdc-icon-button mat-mdc-icon-button mat-badge-accent mat-unthemed mat-mdc-button-base mat-badge-below mat-badge-after mat-badge-small mat-badge-hidden ng-star-inserted']>:nth-child(2)+span")
     public WebElement addButon;
+    @FindBy(xpath = "((//ms-date[@class='w-100-p floating ng-untouched ng-pristine ng-valid ng-star-inserted']//div)[9]//span)[2]")
+    public WebElement AttendanceCalendarButton;
+    @FindBy(xpath = "//span[text()='Attendance']")
+    public WebElement messageButton;
 
 
 public WebElement getWebelement(String element){
@@ -50,6 +54,10 @@ public WebElement getWebelement(String element){
             return this.attendanceExcuseButton;
         case "addButon":
             return this.addButon;
+        case "AttendanceCalendarButton":
+            return this.AttendanceCalendarButton;
+        case "messageButton":
+            return this.messageButton;
 
     }
     return null;
