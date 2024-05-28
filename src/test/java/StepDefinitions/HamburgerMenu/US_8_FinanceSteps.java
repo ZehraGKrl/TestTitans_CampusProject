@@ -53,7 +53,6 @@ public class US_8_FinanceSteps extends ParentPage {
         for (int i = 0; i < paymentButtonList.size(); i++) {
             WebElement webElement = dc.getWebelement(paymentButtonList.get(i));
             dc.myClick(webElement);
-
         }
         GWD.quitDriver();
     }
