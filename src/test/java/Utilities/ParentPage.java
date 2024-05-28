@@ -56,34 +56,7 @@ public class ParentPage {
         new Actions(GWD.getDriver()).moveToElement(element).build().perform();
     }
 
-    public void myUploadFile(String pathFile) {
 
-        Robot robot;
-
-        {
-            try {
-                robot = new Robot();
-            } catch (AWTException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
-        StringSelection createPathFile = new StringSelection(pathFile);
-        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(createPathFile, null);
-
-        robot.delay(1000);
-        robot.keyPress(KeyEvent.VK_CONTROL);
-        robot.keyPress(KeyEvent.VK_V);
-
-        robot.keyRelease(KeyEvent.VK_V);
-        robot.keyRelease(KeyEvent.VK_CONTROL);
-
-        robot.delay(1000);
-        robot.keyPress(KeyEvent.VK_ENTER);
-        robot.keyRelease(KeyEvent.VK_ENTER);
-        robot.delay(1000);
-
-    }
 
 
     public static void wait(int sn) {
