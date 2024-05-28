@@ -28,6 +28,15 @@ public class DialogContent_US_Z extends ParentPage {
     public WebElement successMessage;
     @FindBy(xpath = "//*[text()=' Delete ']")
     public WebElement delete;
+    @FindBy(xpath = "//span[text()='Finance']")
+    public WebElement finance;
+    @FindBy(xpath = "//span[text()='My Finance']")
+    public WebElement myFinance;
+    @FindBy(xpath = "(//span[@class='mat-ripple mat-mdc-button-ripple'])[6]")
+    public WebElement pulldownMenu;
+    @FindBy(xpath = "//span[text()=' Pdf Export ']")
+    public WebElement pdfExport;
+
 
 
 }
