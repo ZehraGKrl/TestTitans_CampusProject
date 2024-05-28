@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 
 public class ParentPage {
@@ -53,5 +56,34 @@ public class ParentPage {
         new Actions(GWD.getDriver()).moveToElement(element).build().perform();
     }
 
+
+    public void myUploadFile(String pathFile) {
+
+        Robot robot;
+
+        {
+            try {
+                robot = new Robot();
+            } catch (AWTException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        StringSelection createPathFile = new StringSelection(pathFile);
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(createPathFile, null);
+
+        robot.delay(1000);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+
+        robot.delay(1000);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        robot.delay(1000);
+
+    }
 
 }
