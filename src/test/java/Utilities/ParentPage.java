@@ -56,7 +56,7 @@ public class ParentPage {
         new Actions(GWD.getDriver()).moveToElement(element).build().perform();
     }
 
-    public void myUploadFile(String pathFile) throws InterruptedException {
+    public void myUploadFile(String pathFile){
 
         Robot robot;
 
