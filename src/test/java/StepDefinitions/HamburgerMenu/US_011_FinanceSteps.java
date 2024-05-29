@@ -8,6 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -56,6 +57,10 @@ public class US_011_FinanceSteps extends ParentPage {
 
     @And("User must enter card details")
     public void userMustEnterCardDetails() {
-
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[class='__PrivateStripeElement']>iframe")));
+        WebElement frame=GWD.getDriver().findElement(By.cssSelector("[class='__PrivateStripeElement']>iframe"));
+        GWD.getDriver().switchTo().frame(frame);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[name='number']")));
+        dcm.mySendKeys(dcm.cardNumber, "4242 4242 4242 4242");
     }
 }
