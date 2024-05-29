@@ -20,24 +20,26 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement viewButton;
     @FindBy(css = "[class='mdc-label']")
     public WebElement stripeButton;
-    @FindBy(css = "[class='wrap-mat-radio-label']")
-    public WebElement payAmountDueButton;
+    @FindBy(css = "[class='w-50-p discount-class']")
+    public WebElement payInFullButton;
     @FindBy(xpath = "(//span[@class='w-50-p'])[2]")
     public WebElement payButton;
-    @FindBy(css = "[id='ms-currency-field-0']>input")
+    @FindBy(xpath = "//ms-currency-field[@formcontrolname='customAmountField']//input")
     public WebElement amountButton;
     @FindBy(xpath = "(//span[@class='ng-star-inserted'])[9]")
     public WebElement paymentButton;
-    @FindBy(xpath = "//iframe[@style='border: 0px !important; margin: -4px; padding: 0px !important; width: calc(100% + 8px); min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; transform: translate(0px) !important; color-scheme: light only !important; height: 228.453px; opacity: 1; transition: height 0.35s ease 0s, opacity 0.4s ease 0.1s;']")
+    @FindBy(css = "[class='__PrivateStripeElement']>iframe")
     public WebElement iframe1;
-    @FindBy(css = "[class='p-PaymentElement de7zKgf4__p-Root p-Locale-en p-Animatable p-LTR'] div>:nth-child(2)>div>div>input")
+    @FindBy(css = "[name='number']")
     public WebElement cardNumberButton;
-    @FindBy(xpath = "(//span[@class='ng-star-inserted'])[9]")
+    @FindBy(css = "[id='Field-expiryInput']")
     public WebElement expirationButton;
-    @FindBy(xpath = "(//span[@class='ng-star-inserted'])[9]")
+    @FindBy(css = "[id='Field-cvcInput']")
     public WebElement cvcButton;
-    @FindBy(xpath = "(//span[@class='ng-star-inserted'])[9]")
+    @FindBy(xpath = "((//span[@class='mdc-button__label'])[15]//following-sibling::span)[1]")
     public WebElement stripePaymentsButton;
+    @FindBy(css = "[class='mat-expansion-panel-header-description ng-star-inserted']")
+    public WebElement paymentSuccessMessage;
     @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
     public WebElement moreButton;
     @FindBy(xpath = "//span[text()='Attendance']")
@@ -78,8 +80,8 @@ public WebElement getWebelement(String element){
             return this.stripeButton;
         case "payButton":
             return this.payButton;
-        case "payAmountDueButton":
-            return this.payAmountDueButton;
+        case "payInFullButton":
+            return this.payInFullButton;
         case "amountButton":
             return this.amountButton;
         case "cardNumberButton":
