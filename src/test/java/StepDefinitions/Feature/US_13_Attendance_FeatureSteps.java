@@ -4,11 +4,13 @@ import Pages.DialogContent_US_O;
 import Pages.LeftNav_US_O;
 import Utilities.ParentPage;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -30,17 +32,32 @@ public class US_13_Attendance_FeatureSteps extends ParentPage {
     }
 
     @When("Enter an excuse")
-    public void enterAnExcuse(DataTable excuseButtons) {
-        List<String> excuseButtonList = excuseButtons.asList(String.class);
-
-        for (int i = 0; i < excuseButtonList.size(); i++) {
-            WebElement webElement =dc.getWebelement(excuseButtonList.get(i));
-            dc.myClick(webElement);
-
-        }
+    public void enterAnExcuse() {
+        wait.until(ExpectedConditions.visibilityOf(dc.addButon));
+        dc.myJSClick(dc.addButon);
+        dc.myClick(dc.attendanceCalendarButton);
+        dc.hoverOver(dc.dateButton);
+        dc.myClick(dc.dateButton);
+        dc.mySendKeys(dc.messageButton,"Cenazemiz var :D");
 
     }
 
 
+    @And("The user uploads and sends a health report or a file upon request")
+    public void theUserUploadsAndSendsAHealthReportOrAFileUponRequest() throws InterruptedException {
+        dc.myClick(dc.attachFilesButton);
+        dc.myClick(dc.fromLocalButton);
+        dc.myUploadFile("C:\\Users\\ozi_9\\Süngerbob.jpg");
+        dc.myClick(dc.sendButton);
 
-}
+
+    }
+
+    @And("Check the accuracy of the received message.")
+    public void checkTheAccuracyOfTheReceivedMessage() {
+
+        wait.until(ExpectedConditions.visibilityOf(dc.successMessage));
+            Assert.assertTrue(dc.successMessage.isDisplayed(), "No message is present!");
+        }
+    }
+
