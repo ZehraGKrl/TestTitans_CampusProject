@@ -53,4 +53,8 @@ public class US_011_FinanceSteps extends ParentPage {
         dcm.myClick(dcm.PayButton1);
         dcm.myClick(dcm.PayButton1);
     }
+
+    @And("User must enter card details")
+    public void userMustEnterCardDetails() {
+    }
 }

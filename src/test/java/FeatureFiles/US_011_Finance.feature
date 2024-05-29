@@ -31,3 +31,5 @@ Feature: Hamburger Menu Finance Functionality
 
     And Click the Pay button
 
+    And User must enter card details
+
