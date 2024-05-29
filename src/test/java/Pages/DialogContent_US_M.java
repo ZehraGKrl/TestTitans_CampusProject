@@ -53,8 +53,11 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "(//span[@class='w-50-p'])[2]")
     public WebElement payButton;
 
-    @FindBy(css = "[class='ng-tns-c1534922977-187']")
+    @FindBy(xpath = "//ms-currency-field[@formcontrolname='customAmountField']//input")
     public WebElement InputAmount;
+
+    @FindBy(xpath = "//ms-button")
+    public WebElement PayButton1;
 
 
     public WebElement getWebElement(String strElement) {
@@ -79,9 +82,6 @@ public class DialogContent_US_M extends ParentPage {
                 return this.payAmountDue;
             case "payButton":
                 return this.payButton;
-            case "InputAmount":
-                return this.InputAmount;
-
 
         }
         return null;

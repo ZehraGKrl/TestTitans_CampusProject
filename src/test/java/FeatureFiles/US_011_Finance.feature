@@ -27,5 +27,7 @@ Feature: Hamburger Menu Finance Functionality
       | payAmountDue |
       | payButton    |
 
-    And User sending the keys in Dialog
-      | InputAmount | 235 |
+    And Enter the amount to be paid
+
+    And Click the Pay button
+

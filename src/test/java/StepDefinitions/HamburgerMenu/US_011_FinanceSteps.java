@@ -6,6 +6,8 @@ import Utilities.GWD;
 import Utilities.ParentPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -37,5 +39,18 @@ public class US_011_FinanceSteps extends ParentPage {
     public void clickTheStripeButtonToChooseThePaymentMethod() {
         wait.until(ExpectedConditions.visibilityOf(dcm.stripeButton));
         dcm.myJSClick(dcm.stripeButton);
+    }
+
+    @And("Enter the amount to be paid")
+    public void enterTheAmountToBePaid() {
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ms-currency-field[@formcontrolname='customAmountField']")));
+        dcm.mySendKeys(dcm.InputAmount, "235");
+    }
+
+    @And("Click the Pay button")
+    public void clickThePayButton() {
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ms-button")));
+        dcm.myClick(dcm.PayButton1);
+        dcm.myClick(dcm.PayButton1);
     }
 }
