@@ -35,7 +35,7 @@ public class US_011_FinanceSteps extends ParentPage {
 
     @And("Click the Stripe button to choose the payment method")
     public void clickTheStripeButtonToChooseThePaymentMethod() {
-        wait.until(ExpectedConditions.elementToBeClickable(dcm.stripeButton));
+        wait.until(ExpectedConditions.visibilityOf(dcm.stripeButton));
         dcm.myJSClick(dcm.stripeButton);
     }
 }

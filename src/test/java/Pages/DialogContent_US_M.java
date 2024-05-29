@@ -44,7 +44,7 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "(//tbody/tr/td)[10]/div")
     public WebElement viewButton;
 
-    @FindBy(css = "[id='mat-radio-8-input']")
+    @FindBy(xpath = "(//div[@class='mat-mdc-radio-touch-target'])[1]/following-sibling::input")
     public WebElement stripeButton;
 
 
