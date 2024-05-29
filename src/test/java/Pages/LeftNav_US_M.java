@@ -17,6 +17,9 @@ public class LeftNav_US_M extends ParentPage {
     @FindBy(xpath = "//span[text()='Messaging']")
     public WebElement messaging;
 
+    @FindBy(xpath = "(//fa-icon[@class='ng-fa-icon ng-star-inserted'])[6]/following-sibling::span")
+    public WebElement financeButton;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "hamburgerMenu":
