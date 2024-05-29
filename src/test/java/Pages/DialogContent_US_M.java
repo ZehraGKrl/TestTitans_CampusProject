@@ -47,7 +47,7 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(css = "[class='mdc-label']")
     public WebElement stripeButton;
 
-    @FindBy(css = "[class='wrap-mat-radio-label']")
+    @FindBy(css = "[class='w-50-p discount-class']")
     public WebElement payAmountDue;
 
     @FindBy(xpath = "(//span[@class='w-50-p'])[2]")
@@ -67,6 +67,12 @@ public class DialogContent_US_M extends ParentPage {
 
     @FindBy(xpath = "(//div[@class='p-Input'])[3]//input")
     public WebElement cvcNumber;
+
+    @FindBy(xpath = "((//span[@class='mdc-button__label'])[15]//following-sibling::span)[1]")
+    public WebElement StripePayments;
+
+    @FindBy(css = "[class='mat-expansion-panel-header-description ng-star-inserted']")
+    public WebElement confirmMessagePay;
 
 
     public WebElement getWebElement(String strElement) {

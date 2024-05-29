@@ -45,7 +45,7 @@ public class US_011_FinanceSteps extends ParentPage {
     @And("Enter the amount to be paid")
     public void enterTheAmountToBePaid() {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ms-currency-field[@formcontrolname='customAmountField']")));
-        dcm.mySendKeys(dcm.InputAmount, "235");
+        dcm.mySendKeys(dcm.InputAmount, "1");
     }
 
     @And("Click the Pay button")
@@ -65,6 +65,17 @@ public class US_011_FinanceSteps extends ParentPage {
         dcm.mySendKeys(dcm.cardNumber, "4242 4242 4242 4242");
 
         dcm.mySendKeys(dcm.expirationNumber, "1225");
-        dcm.mySendKeys(dcm.cvcNumber,"0707");
+        dcm.mySendKeys(dcm.cvcNumber,"070");
+
+        GWD.getDriver().switchTo().defaultContent();
+
+        wait.until(ExpectedConditions.visibilityOf(dcm.StripePayments));
+        dcm.myJSClick(dcm.StripePayments);
+    }
+
+    @And("The user should receive a confirmation message that they have paid")
+    public void theUserShouldReceiveAConfirmationMessageThatTheyHavePaid() {
+        wait.until(ExpectedConditions.visibilityOf(dcm.confirmMessagePay));
+        dcm.verifyContainsText(dcm.confirmMessagePay,"Student Payment successfully created");
     }
 }

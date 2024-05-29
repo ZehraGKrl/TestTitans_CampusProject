@@ -33,3 +33,5 @@ Feature: Hamburger Menu Finance Functionality
 
     And User must enter card details
 
+    And The user should receive a confirmation message that they have paid
+
