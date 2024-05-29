@@ -16,3 +16,6 @@ Feature: Hamburger Menu Finance Functionality
       | hamburgerMenu |
 
     Then Hover Over the Finance button
+
+    And Click on the element in Dialog
+      | MyFinanceButton |

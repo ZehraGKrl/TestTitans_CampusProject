@@ -38,6 +38,9 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(css = "[class='mat-expansion-panel-header-description ng-star-inserted'] div")
     public WebElement confirmMessage;
 
+    @FindBy(xpath = "//span[text()='My Finance']")
+    public WebElement MyFinanceButton;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
@@ -53,6 +56,8 @@ public class DialogContent_US_M extends ParentPage {
                 return this.trashButton;
             case "confirmButton":
                 return this.confirmButton;
+            case "MyFinanceButton":
+                return this.MyFinanceButton;
 
         }
         return null;
