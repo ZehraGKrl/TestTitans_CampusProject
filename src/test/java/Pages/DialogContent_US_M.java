@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DialogContent_US_M extends ParentPage {
     public DialogContent_US_M() {
         PageFactory.initElements(GWD.getDriver(), this);
@@ -73,6 +75,9 @@ public class DialogContent_US_M extends ParentPage {
 
     @FindBy(css = "[class='mat-expansion-panel-header-description ng-star-inserted']")
     public WebElement confirmMessagePay;
+
+    @FindBy(xpath = "//tbody")
+    public List<WebElement> courseGradeList;
 
 
     public WebElement getWebElement(String strElement) {
