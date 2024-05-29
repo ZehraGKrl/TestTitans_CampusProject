@@ -59,6 +59,9 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//ms-button")
     public WebElement PayButton1;
 
+    @FindBy(css = "[name='number']")
+    public WebElement cardNumber;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {

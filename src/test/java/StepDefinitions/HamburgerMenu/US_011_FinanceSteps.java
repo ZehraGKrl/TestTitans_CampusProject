@@ -56,5 +56,6 @@ public class US_011_FinanceSteps extends ParentPage {
 
     @And("User must enter card details")
     public void userMustEnterCardDetails() {
+
     }
 }
