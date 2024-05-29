@@ -9,7 +9,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
@@ -37,23 +39,28 @@ public class US_8_FinanceSteps extends ParentPage {
             dc.myClick(webElement);
 
         }
-
     }
 
     @Then("Click on the my finance button")
     public void clickOnTheMyFinanceButton() {
         wait.until(ExpectedConditions.visibilityOf(dc.myFinanceButton));
         dc.myClick(dc.myFinanceButton);
+
     }
 
 
     @And("Make payment in My finance section")
-    public void makePaymentInMyFinanceSection( DataTable paymentButtons) {
-        List<String> paymentButtonList = paymentButtons.asList(String.class);
-        for (int i = 0; i < paymentButtonList.size(); i++) {
-            WebElement webElement = dc.getWebelement(paymentButtonList.get(i));
-            dc.myClick(webElement);
-        }
-        GWD.quitDriver();
+    public void makePaymentInMyFinanceSection() {
+        dc.myClick(dc.viewButton);
+        dc.myClick(dc.stripeButton);
+        dc.myClick(dc.payAmountDueButton);
+        dc.myClick(dc.payButton);
+        dc.mySendKeys(dc.amountButton,"1");
+        new Actions(GWD.getDriver()).doubleClick(dc.paymentButton).build().perform();
+
+
+
+
     }
+
 }

@@ -18,8 +18,24 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement myFinanceButton;
     @FindBy(css = "ms-standard-button button fa-icon+span")
     public WebElement viewButton;
-    @FindBy(css = "[class='mat-mdc-radio-group ng-untouched ng-pristine ng-valid']>div>mat-radio-button>div>div>div+input")
+    @FindBy(css = "[class='mdc-label']")
     public WebElement stripeButton;
+    @FindBy(css = "[class='wrap-mat-radio-label']")
+    public WebElement payAmountDueButton;
+    @FindBy(xpath = "(//span[@class='w-50-p'])[2]")
+    public WebElement payButton;
+    @FindBy(css = "[id='ms-currency-field-0']>input")
+    public WebElement amountButton;
+    @FindBy(xpath = "(//span[@class='ng-star-inserted'])[9]")
+    public WebElement paymentButton;
+    @FindBy(xpath = "(//span[@class='ng-star-inserted'])[9]")
+    public WebElement cardNumberButton;
+    @FindBy(xpath = "(//span[@class='ng-star-inserted'])[9]")
+    public WebElement expirationButton;
+    @FindBy(xpath = "(//span[@class='ng-star-inserted'])[9]")
+    public WebElement cvcButton;
+    @FindBy(xpath = "(//span[@class='ng-star-inserted'])[9]")
+    public WebElement stripePaymentsButton;
     @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
     public WebElement moreButton;
     @FindBy(xpath = "//span[text()='Attendance']")
@@ -58,6 +74,22 @@ public WebElement getWebelement(String element){
             return this.viewButton;
         case "stripeButton":
             return this.stripeButton;
+        case "payButton":
+            return this.payButton;
+        case "payAmountDueButton":
+            return this.payAmountDueButton;
+        case "amountButton":
+            return this.amountButton;
+        case "cardNumberButton":
+            return this.cardNumberButton;
+        case "expirationButton":
+            return this.expirationButton;
+        case "cvcButton":
+            return this.cvcButton;
+        case "stripePaymentsButton":
+            return this.stripePaymentsButton;
+        case "paymentButton":
+            return this.paymentButton;
         case "attendanceButton":
             return this.attendanceButton;
         case "attendanceExcuseButton":

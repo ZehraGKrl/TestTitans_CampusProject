@@ -10,9 +10,6 @@ Feature: Finance Functionality
       | financeButton |
 
     Then Click on the my finance button
-
     And Make payment in My finance section
-      | viewButton   |
-      | stripeButton |
 
 
