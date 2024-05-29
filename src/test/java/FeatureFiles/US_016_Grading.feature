@@ -9,3 +9,7 @@ Feature: Grading Functionality
 
     Then Click on the element in Dialog
       | loginButton |
+
+  Scenario: Testing the sections inside the Grading button
+    And Click on the element Top Menu
+      | gradingButton |
