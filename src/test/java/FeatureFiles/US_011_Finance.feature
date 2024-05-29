@@ -14,3 +14,5 @@ Feature: Hamburger Menu Finance Functionality
 
     And Click on the element Top Menu
       | hamburgerMenu |
+
+    Then Hover Over the Finance button
