@@ -15,13 +15,17 @@ public class US_011_FinanceSteps extends ParentPage {
 
     @Then("Hover Over the Finance button")
     public void hoverOverTheFinanceButton() {
-        wait.until(ExpectedConditions.visibilityOf(lfm.financeButton));
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
         Actions actionDriver = new Actions(GWD.getDriver());
         actionDriver.moveToElement(lfm.financeButton).build().perform();
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
