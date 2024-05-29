@@ -41,6 +41,9 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//span[text()='My Finance']")
     public WebElement MyFinanceButton;
 
+    @FindBy(xpath = "(//tbody/tr/td)[10]/div")
+    public WebElement viewButton;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
@@ -58,6 +61,8 @@ public class DialogContent_US_M extends ParentPage {
                 return this.confirmButton;
             case "MyFinanceButton":
                 return this.MyFinanceButton;
+            case "viewButton":
+                return this.viewButton;
 
         }
         return null;
