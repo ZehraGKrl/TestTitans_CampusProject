@@ -4,6 +4,7 @@ import Pages.DialogContent_US_M;
 import Pages.LeftNav_US_M;
 import Utilities.GWD;
 import Utilities.ParentPage;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -30,5 +31,11 @@ public class US_011_FinanceSteps extends ParentPage {
             throw new RuntimeException(e);
         }
 
+    }
+
+    @And("Click the Stripe button to choose the payment method")
+    public void clickTheStripeButtonToChooseThePaymentMethod() {
+        wait.until(ExpectedConditions.elementToBeClickable(dcm.stripeButton));
+        dcm.myJSClick(dcm.stripeButton);
     }
 }

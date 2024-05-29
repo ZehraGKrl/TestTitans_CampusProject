@@ -20,3 +20,5 @@ Feature: Hamburger Menu Finance Functionality
     And Click on the element in Dialog
       | MyFinanceButton |
       | viewButton      |
+
+    And Click the Stripe button to choose the payment method
