@@ -28,7 +28,9 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement amountButton;
     @FindBy(xpath = "(//span[@class='ng-star-inserted'])[9]")
     public WebElement paymentButton;
-    @FindBy(xpath = "(//span[@class='ng-star-inserted'])[9]")
+    @FindBy(xpath = "//iframe[@style='border: 0px !important; margin: -4px; padding: 0px !important; width: calc(100% + 8px); min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; transform: translate(0px) !important; color-scheme: light only !important; height: 228.453px; opacity: 1; transition: height 0.35s ease 0s, opacity 0.4s ease 0.1s;']")
+    public WebElement iframe1;
+    @FindBy(css = "[class='p-PaymentElement de7zKgf4__p-Root p-Locale-en p-Animatable p-LTR'] div>:nth-child(2)>div>div>input")
     public WebElement cardNumberButton;
     @FindBy(xpath = "(//span[@class='ng-star-inserted'])[9]")
     public WebElement expirationButton;

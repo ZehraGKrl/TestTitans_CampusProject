@@ -57,6 +57,9 @@ public class US_8_FinanceSteps extends ParentPage {
         dc.myClick(dc.payButton);
         dc.mySendKeys(dc.amountButton,"1");
         new Actions(GWD.getDriver()).doubleClick(dc.paymentButton).build().perform();
+        GWD.getDriver().switchTo().frame(dc.iframe1);
+        dc.mySendKeys(dc.cardNumberButton,"4242 4242 4242 4242");
+
 
 
 
