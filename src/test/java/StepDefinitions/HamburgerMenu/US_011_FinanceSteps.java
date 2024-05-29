@@ -60,7 +60,11 @@ public class US_011_FinanceSteps extends ParentPage {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[class='__PrivateStripeElement']>iframe")));
         WebElement frame=GWD.getDriver().findElement(By.cssSelector("[class='__PrivateStripeElement']>iframe"));
         GWD.getDriver().switchTo().frame(frame);
+
         wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[name='number']")));
         dcm.mySendKeys(dcm.cardNumber, "4242 4242 4242 4242");
+
+        dcm.mySendKeys(dcm.expirationNumber, "1225");
+        dcm.mySendKeys(dcm.cvcNumber,"0707");
     }
 }

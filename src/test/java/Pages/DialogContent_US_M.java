@@ -62,6 +62,12 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(css = "[name='number']")
     public WebElement cardNumber;
 
+    @FindBy(xpath = "(//div[@class='p-Input'])[2]//input")
+    public WebElement expirationNumber;
+
+    @FindBy(xpath = "(//div[@class='p-Input'])[3]//input")
+    public WebElement cvcNumber;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
@@ -85,6 +91,7 @@ public class DialogContent_US_M extends ParentPage {
                 return this.payAmountDue;
             case "payButton":
                 return this.payButton;
+
 
         }
         return null;
