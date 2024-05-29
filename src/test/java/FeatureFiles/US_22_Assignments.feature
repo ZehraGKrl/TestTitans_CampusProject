@@ -10,3 +10,5 @@ Feature: Assignments Functionality
     And Main page should be displayed
 
     Scenario: Student should see all info and search within tasks and sort items on the Assign page
+      When Click the assignments button
+      And Search button should be visible and clickable

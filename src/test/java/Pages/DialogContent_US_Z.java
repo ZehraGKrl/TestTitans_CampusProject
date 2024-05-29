@@ -44,6 +44,10 @@ public class DialogContent_US_Z extends ParentPage {
     public WebElement transcript;
     @FindBy(xpath = "//button[normalize-space(.)='Print']")
     public WebElement print;
+    @FindBy(xpath = "(//span[text()='Assignments'])[1]")
+    public WebElement assignments;
+    @FindBy(xpath = "//span[text()='Search']")
+    public WebElement search;
 
 
 
