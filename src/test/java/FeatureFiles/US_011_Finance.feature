@@ -22,3 +22,10 @@ Feature: Hamburger Menu Finance Functionality
       | viewButton      |
 
     And Click the Stripe button to choose the payment method
+
+    And Click on the element in Dialog
+      | payAmountDue |
+      | payButton    |
+
+    And User sending the keys in Dialog
+      | InputAmount | 235 |

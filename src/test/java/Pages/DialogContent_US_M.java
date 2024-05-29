@@ -44,8 +44,17 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "(//tbody/tr/td)[10]/div")
     public WebElement viewButton;
 
-    @FindBy(xpath = "(//div[@class='mat-mdc-radio-touch-target'])[1]/following-sibling::input")
+    @FindBy(css = "[class='mdc-label']")
     public WebElement stripeButton;
+
+    @FindBy(css = "[class='wrap-mat-radio-label']")
+    public WebElement payAmountDue;
+
+    @FindBy(xpath = "(//span[@class='w-50-p'])[2]")
+    public WebElement payButton;
+
+    @FindBy(css = "[class='ng-tns-c1534922977-187']")
+    public WebElement InputAmount;
 
 
     public WebElement getWebElement(String strElement) {
@@ -66,6 +75,13 @@ public class DialogContent_US_M extends ParentPage {
                 return this.MyFinanceButton;
             case "viewButton":
                 return this.viewButton;
+            case "payAmountDue":
+                return this.payAmountDue;
+            case "payButton":
+                return this.payButton;
+            case "InputAmount":
+                return this.InputAmount;
+
 
         }
         return null;
