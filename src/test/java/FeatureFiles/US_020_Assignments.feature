@@ -5,7 +5,7 @@ Feature: Assignment Functionality
       | usernameInput | Student_7 |
       | passwordInput | S12345    |
     Then Click on the element in Dialog
-      | loginButton Assignment Functionality|
+      | loginButton |
     And Main page should be displayed
 
   Scenario: Assignment Functionality
