@@ -38,7 +38,7 @@ public class LeftNav_US_O extends ParentPage {
     public WebElement newMessageButtonOpen;
     @FindBy(css = "[class='svg-inline--fa fa-angle-down fa-fw']")
     public WebElement profileSettingsButton;
-    @FindBy(css = "[class='mat-mdc-button-wrapper mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base accent-800-bg']>span>span>span")
+    @FindBy(css = "[id='mat-badge-content-130']")
     public WebElement assignmentsNumbers;
 
 
