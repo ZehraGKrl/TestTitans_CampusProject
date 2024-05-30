@@ -48,7 +48,7 @@ public class US_18_Assignments_FeatureSteps extends ParentPage {
         dc.myJSClick(dc.semesterAllButton);
 
         List<String> assignmentslist = new ArrayList<>();
-        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("[style='padding-top: 2px; font-size: 16px;']")));
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("[style='padding-top: 2px; font-size: 16px;']")));
 
         for (WebElement e : dc.assignmentsList)
             assignmentslist.add(e.getText());
