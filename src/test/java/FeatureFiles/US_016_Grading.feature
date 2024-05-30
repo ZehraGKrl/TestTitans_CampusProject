@@ -24,4 +24,4 @@ Feature: Grading Functionality
 
     And Click on the Course Grade button
 
-    Then List the names of courses in the Course Grade button
+    Then List the names of elements in the Course Grade button

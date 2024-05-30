@@ -55,17 +55,21 @@ public class US_016_GradingSteps extends ParentPage {
 
     @And("Click on the Course Grade button")
     public void clickOnTheCourseGradeButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(dcm.CourseGradeButton));
+        dcm.myClick(dcm.CourseGradeButton);
     }
 
-    @Then("List the names of courses in the Course Grade button")
-    public void listTheNamesOfCoursesInTheCourseGradeButton() {
+    @Then("List the names of elements in the Course Grade button")
+    public void listTheNamesOfElementsInTheCourseGradeButton() {
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//thead/tr/th")));
+        List<String> listElements=new ArrayList<>();
 
-        System.out.println("dcm.courseGradeList.size() = " + dcm.courseGradeList.size());
-
-        for (WebElement e : dcm.courseGradeList) {
-            System.out.println("e.getText() = " + e.getText());
-
-
+        for (WebElement m : dcm.elementsInCourseGrade) {
+            listElements.add(m.getText());
         }
+        Assert.assertTrue(listElements.get(0).trim().equalsIgnoreCase("Course Name"));
+        Assert.assertTrue(listElements.get(1).trim().equalsIgnoreCase("Semester 1"));
+        Assert.assertTrue(listElements.get(2).trim().equalsIgnoreCase("Semester 2"));
+        Assert.assertTrue(listElements.get(3).trim().equalsIgnoreCase("Final"));
     }
 }
