@@ -4,6 +4,7 @@ import Pages.DialogContent_US_O;
 import Pages.LeftNav_US_O;
 import Utilities.GWD;
 import Utilities.ParentPage;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -39,35 +40,30 @@ public class US_18_Assignments_FeatureSteps extends ParentPage {
 
     @Then("Click on Assignments and verify the existence of assigned tasks in the sheet.")
     public void clickOnAssignmentsAndVerifyTheExistenceOfAssignedTasksInTheSheet() {
+        wait.until(ExpectedConditions.visibilityOf(dc.assignmentsCalendarButton));
         dc.myClick(dc.assignmentsCalendarButton);
         wait.until(ExpectedConditions.visibilityOf(dc.thisYearButton));
-        dc.myClick(dc.thisYearButton);
+        dc.myJSClick(dc.thisYearButton);
+        wait.until(ExpectedConditions.visibilityOf(dc.semesterSelectButton));
+        dc.myJSClick(dc.semesterSelectButton);
+        wait.until(ExpectedConditions.visibilityOf(dc.semesterAllButton));
+        dc.myJSClick(dc.semesterAllButton);
         wait.until(ExpectedConditions.visibilityOf(dc.searchButton));
         dc.myJSClick(dc.searchButton);
-        dc.myJSClick(dc.semesterSelectButton);
-        dc.myJSClick(dc.semesterAllButton);
-
-        List<String> assignmentslist = new ArrayList<>();
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("[style='padding-top: 2px; font-size: 16px;']")));
-
-        for (WebElement e : dc.assignmentsList)
-            assignmentslist.add(e.getText());
-        System.out.println("assignmentslist = " + assignmentslist);
-
-
-        
-
-
-
-
-
-
-
-
-
-
 
     }
 
 
+    @And("Verify existence of tasks in Assignments section")
+    public void verifyExistenceOfTasksInAssignmentsSection() {
+
+        List<String> assignmentslist = new ArrayList<>();
+//        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("[style='padding-top: 2px; font-size: 16px;']")));
+        wait(1000);
+        for (WebElement e : dc.assignmentsList) {
+            assignmentslist.add(e.getText());
+
+        }
+        System.out.println("assignmentslist = " + assignmentslist);
+    }
 }
