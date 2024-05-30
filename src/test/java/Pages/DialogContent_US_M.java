@@ -79,7 +79,7 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "(//span[@class='mdc-tab__content'])[1]//span")
     public WebElement CourseGradeButton;
 
-    @FindBy(xpath = "//thead/tr/th")
+    @FindBy(css = "[class='mat-mdc-header-row mdc-data-table__header-row cdk-header-row ng-star-inserted']>th")
     public List<WebElement> elementsInCourseGrade;
 
     @FindBy(xpath = "(//tbody/tr/td)[1]")

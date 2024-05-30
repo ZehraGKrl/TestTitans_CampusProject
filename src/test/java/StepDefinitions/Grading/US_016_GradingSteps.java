@@ -20,7 +20,7 @@ public class US_016_GradingSteps extends ParentPage {
     @Then("Click on the transcript by subject button")
     public void clickOnTheTranscriptBySubjectButton() {
         wait.until(ExpectedConditions.elementToBeClickable(lfm.transcriptBySubject));
-        lfm.myClick(lfm.transcriptBySubject);
+        lfm.myJSClick(lfm.transcriptBySubject);
     }
 
     @And("Transcript by course should be appeared")
@@ -37,7 +37,7 @@ public class US_016_GradingSteps extends ParentPage {
 
     @And("Verify elements in Student Transcript button")
     public void verifyElementsInStudentTranscriptButton() {
-        List<String> listItems=new ArrayList<>();
+        List<String> listItems = new ArrayList<>();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//thead/tr/th")));
 
         for (WebElement e : dcm.items) {
@@ -60,13 +60,14 @@ public class US_016_GradingSteps extends ParentPage {
     }
 
     @Then("List the names of elements in the Course Grade button")
-    public void listTheNamesOfElementsInTheCourseGradeButton() {
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//thead/tr/th")));
-        List<String> listElements=new ArrayList<>();
+    public void listTheNamesOfElementsInTheCourseGradeButton() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("[class='mat-mdc-header-row mdc-data-table__header-row cdk-header-row ng-star-inserted']>th")));
+        List<String> listElements = new ArrayList<>();
 
         for (WebElement m : dcm.elementsInCourseGrade) {
             listElements.add(m.getText());
         }
+
         Assert.assertTrue(listElements.get(0).trim().equalsIgnoreCase("Course Name"));
         Assert.assertTrue(listElements.get(1).trim().equalsIgnoreCase("Semester 1"));
         Assert.assertTrue(listElements.get(2).trim().equalsIgnoreCase("Semester 2"));
