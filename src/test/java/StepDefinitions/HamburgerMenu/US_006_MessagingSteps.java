@@ -22,12 +22,17 @@ public class US_006_MessagingSteps extends ParentPage {
 
     @And("Hover Over the messaging button")
     public void hoverOverTheMessagingButton() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         Actions ActionDriver = new Actions(GWD.getDriver());
 
         ActionDriver.moveToElement(lfm.messaging).build().perform();
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -41,7 +46,11 @@ public class US_006_MessagingSteps extends ParentPage {
 
     @And("Click on the element Top Menu")
     public void clickOnTheElementTopMenu(DataTable button) {
-        wait.until(ExpectedConditions.elementToBeClickable(lfm.hamburgerMenu));
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
         List<String> textList = button.asList(String.class);
 

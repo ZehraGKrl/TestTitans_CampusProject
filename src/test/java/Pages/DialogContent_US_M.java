@@ -38,6 +38,42 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(css = "[class='mat-expansion-panel-header-description ng-star-inserted'] div")
     public WebElement confirmMessage;
 
+    @FindBy(xpath = "//span[text()='My Finance']")
+    public WebElement MyFinanceButton;
+
+    @FindBy(xpath = "(//tbody/tr/td)[10]/div")
+    public WebElement viewButton;
+
+    @FindBy(css = "[class='mdc-label']")
+    public WebElement stripeButton;
+
+    @FindBy(css = "[class='w-50-p discount-class']")
+    public WebElement payAmountDue;
+
+    @FindBy(xpath = "(//span[@class='w-50-p'])[2]")
+    public WebElement payButton;
+
+    @FindBy(xpath = "//ms-currency-field[@formcontrolname='customAmountField']//input")
+    public WebElement InputAmount;
+
+    @FindBy(xpath = "//ms-button")
+    public WebElement PayButton1;
+
+    @FindBy(css = "[name='number']")
+    public WebElement cardNumber;
+
+    @FindBy(xpath = "(//div[@class='p-Input'])[2]//input")
+    public WebElement expirationNumber;
+
+    @FindBy(xpath = "(//div[@class='p-Input'])[3]//input")
+    public WebElement cvcNumber;
+
+    @FindBy(xpath = "((//span[@class='mdc-button__label'])[15]//following-sibling::span)[1]")
+    public WebElement StripePayments;
+
+    @FindBy(css = "[class='mat-expansion-panel-header-description ng-star-inserted']")
+    public WebElement confirmMessagePay;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
@@ -53,6 +89,15 @@ public class DialogContent_US_M extends ParentPage {
                 return this.trashButton;
             case "confirmButton":
                 return this.confirmButton;
+            case "MyFinanceButton":
+                return this.MyFinanceButton;
+            case "viewButton":
+                return this.viewButton;
+            case "payAmountDue":
+                return this.payAmountDue;
+            case "payButton":
+                return this.payButton;
+
 
         }
         return null;
