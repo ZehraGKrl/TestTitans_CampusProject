@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DialogContent_US_O extends ParentPage {
 
     public DialogContent_US_O() {
@@ -62,6 +64,19 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement sendButton;
     @FindBy(xpath = "//*[contains(text(),'Attendance Excuse successfully sent')]")
     public WebElement successMessage;
+    @FindBy(css = "[aria-label='Open calendar']>span+svg+span")
+    public WebElement assignmentsCalendarButton;
+    @FindBy(xpath = "(//button[@class='mdc-button mat-mdc-button mat-primary mat-mdc-button-base ng-star-inserted'])[5]/span[2]")
+    public WebElement thisYearButton;
+    @FindBy(xpath = "(//button[@class='mdc-button mat-mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base']//span)[3]")
+    public WebElement searchButton;
+    @FindBy(xpath = "(//body[@class='ng-tns-0-0']//div)[71]")
+    public WebElement semesterSelectButton;
+    @FindBy(xpath = "(//body[@class='ng-tns-0-0']//mat-option)[1]")
+    public WebElement semesterAllButton;
+    @FindBy(css = "[style='padding-top: 2px; font-size: 16px;']")
+    public List<WebElement> assignmentsList;
+
 
 
 public WebElement getWebelement(String element){
