@@ -23,7 +23,7 @@ public class LeftNav_US_M extends ParentPage {
     @FindBy(xpath = "(//*[@data-icon='chart-mixed'])[1]")
     public WebElement gradingButton;
 
-    @FindBy(xpath = "(//span[@class='mdc-tab__text-label'])[3]")
+    @FindBy(xpath = "((//div[@class='mat-ripple mat-mdc-tab-ripple'])[3]//following-sibling::span)[1]//span")
     public WebElement transcriptBySubject;
 
     @FindBy(xpath = "(//span[@class='mdc-tab__content'])[2]")
