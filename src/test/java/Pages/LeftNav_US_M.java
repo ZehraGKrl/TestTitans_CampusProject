@@ -23,6 +23,9 @@ public class LeftNav_US_M extends ParentPage {
     @FindBy(xpath = "(//*[@data-icon='chart-mixed'])[1]")
     public WebElement gradingButton;
 
+    @FindBy(xpath = "(//span[@class='mdc-tab__text-label'])[3]")
+    public WebElement transcriptBySubject;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "hamburgerMenu":

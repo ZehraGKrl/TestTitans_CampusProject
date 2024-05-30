@@ -14,4 +14,6 @@ Feature: Grading Functionality
     And Click on the element Top Menu
       | gradingButton |
 
+    Then Click on the transcript by subject button
+
     Then List the names of courses in the Course Grade button

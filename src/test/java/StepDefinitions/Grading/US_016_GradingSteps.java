@@ -20,10 +20,9 @@ public class US_016_GradingSteps extends ParentPage{
             
             
         }
+    }
 
-
-            
-
-       
+    @Then("Click on the transcript by subject button")
+    public void clickOnTheTranscriptBySubjectButton() {
     }
 }
