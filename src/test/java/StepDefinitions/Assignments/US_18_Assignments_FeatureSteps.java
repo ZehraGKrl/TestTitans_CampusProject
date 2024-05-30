@@ -15,6 +15,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class US_18_Assignments_FeatureSteps extends ParentPage {
 
     LeftNav_US_O ln = new LeftNav_US_O();
@@ -36,9 +39,29 @@ public class US_18_Assignments_FeatureSteps extends ParentPage {
     @Then("Click on Assignments and verify the existence of assigned tasks in the sheet.")
     public void clickOnAssignmentsAndVerifyTheExistenceOfAssignedTasksInTheSheet() {
         dc.myClick(dc.assignmentsCalendarButton);
+        wait.until(ExpectedConditions.visibilityOf(dc.thisYearButton));
         dc.myClick(dc.thisYearButton);
+        wait.until(ExpectedConditions.visibilityOf(dc.searchButton));
         dc.myJSClick(dc.searchButton);
-        dc.myClick(dc.semesterSelectButton);
+        dc.myJSClick(dc.semesterSelectButton);
+        dc.myJSClick(dc.semesterAllButton);
+
+        List<String> assignmentslist = new ArrayList<>();
+
+        for (WebElement e : dc.assignmentsList)
+            assignmentslist.add(e.getText());
+
+
+        
+
+
+
+
+
+
+
+
+
 
 
     }
