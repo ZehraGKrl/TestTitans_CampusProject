@@ -20,10 +20,21 @@ public class LeftNav_US_M extends ParentPage {
     @FindBy(xpath = "(//fa-icon[@class='ng-fa-icon ng-star-inserted'])[6]/following-sibling::span")
     public WebElement financeButton;
 
+    @FindBy(xpath = "(//*[@data-icon='chart-mixed'])[1]")
+    public WebElement gradingButton;
+
+    @FindBy(xpath = "((//div[@class='mat-ripple mat-mdc-tab-ripple'])[3]//following-sibling::span)[1]//span")
+    public WebElement transcriptBySubject;
+
+    @FindBy(xpath = "(//span[@class='mdc-tab__content'])[2]")
+    public WebElement studentTranscript;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "hamburgerMenu":
                 return this.hamburgerMenu;
+            case "gradingButton":
+                return this.gradingButton;
         }
 
         return null;
