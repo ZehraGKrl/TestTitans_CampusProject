@@ -26,6 +26,9 @@ public class LeftNav_US_M extends ParentPage {
     @FindBy(xpath = "(//span[@class='mdc-tab__text-label'])[3]")
     public WebElement transcriptBySubject;
 
+    @FindBy(xpath = "(//span[@class='mdc-tab__content'])[2]")
+    public WebElement studentTranscript;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "hamburgerMenu":

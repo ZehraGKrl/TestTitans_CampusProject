@@ -58,6 +58,8 @@ public class US_006_MessagingSteps extends ParentPage {
             WebElement buttonWebElement = lfm.getWebElement(textList.get(i));
             lfm.myClick(buttonWebElement);
         }
+
+
     }
 
     @And("Confirm message should be displayed")

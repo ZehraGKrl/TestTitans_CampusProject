@@ -79,6 +79,12 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//tbody/tr/td/div/div[@style='font-size: 16px;']")
     public List<WebElement> courseGradeList;
 
+    @FindBy(xpath = "(//tbody/tr/td)[1]")
+    public WebElement subject;
+
+    @FindBy(xpath = "//thead/tr/th")
+    public List<WebElement> items;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {

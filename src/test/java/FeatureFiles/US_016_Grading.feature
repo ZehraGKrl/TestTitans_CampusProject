@@ -16,4 +16,10 @@ Feature: Grading Functionality
 
     Then Click on the transcript by subject button
 
+    And Transcript by course should be appeared
+
+    Then Click on the Student transcript button
+
+    And Verify items in Student Transcript button
+
     Then List the names of courses in the Course Grade button
