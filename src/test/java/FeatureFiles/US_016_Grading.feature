@@ -22,4 +22,6 @@ Feature: Grading Functionality
 
     And Verify elements in Student Transcript button
 
+    And Click on the Course Grade button
+
     Then List the names of courses in the Course Grade button

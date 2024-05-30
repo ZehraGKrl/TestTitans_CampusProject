@@ -76,6 +76,9 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(css = "[class='mat-expansion-panel-header-description ng-star-inserted']")
     public WebElement confirmMessagePay;
 
+    @FindBy(xpath = "(//span[@class='mdc-tab__content'])[1]//span")
+    public WebElement CourseGradeButton;
+
     @FindBy(xpath = "//tbody/tr/td/div/div[@style='font-size: 16px;']")
     public List<WebElement> courseGradeList;
 

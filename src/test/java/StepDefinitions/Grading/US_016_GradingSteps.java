@@ -17,17 +17,6 @@ public class US_016_GradingSteps extends ParentPage {
     DialogContent_US_M dcm = new DialogContent_US_M();
     LeftNav_US_M lfm = new LeftNav_US_M();
 
-    @Then("List the names of courses in the Course Grade button")
-    public void listTheNamesOfCoursesInTheCourseGradeButton() {
-
-        System.out.println("dcm.courseGradeList.size() = " + dcm.courseGradeList.size());
-
-        for (WebElement e : dcm.courseGradeList) {
-            System.out.println("e.getText() = " + e.getText());
-
-
-        }
-    }
     @Then("Click on the transcript by subject button")
     public void clickOnTheTranscriptBySubjectButton() {
         wait.until(ExpectedConditions.elementToBeClickable(lfm.transcriptBySubject));
@@ -62,5 +51,21 @@ public class US_016_GradingSteps extends ParentPage {
         Assert.assertTrue(listItems.get(4).trim().equalsIgnoreCase("Letter Grade"));
         Assert.assertTrue(listItems.get(5).trim().equalsIgnoreCase("Description"));
 
+    }
+
+    @And("Click on the Course Grade button")
+    public void clickOnTheCourseGradeButton() {
+    }
+
+    @Then("List the names of courses in the Course Grade button")
+    public void listTheNamesOfCoursesInTheCourseGradeButton() {
+
+        System.out.println("dcm.courseGradeList.size() = " + dcm.courseGradeList.size());
+
+        for (WebElement e : dcm.courseGradeList) {
+            System.out.println("e.getText() = " + e.getText());
+
+
+        }
     }
 }
