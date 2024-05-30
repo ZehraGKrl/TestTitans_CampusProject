@@ -38,13 +38,12 @@ public class LeftNav_US_O extends ParentPage {
     public WebElement newMessageButtonOpen;
     @FindBy(css = "[class='svg-inline--fa fa-angle-down fa-fw']")
     public WebElement profileSettingsButton;
-    @FindBy(css = "[id='mat-badge-content-130']")
+    @FindBy(xpath = "//div[@class='cdk-overlay-container']/div")
     public WebElement assignmentsNumbers;
-
 
     public WebElement getWebelement(String element){
 
-        switch (element){
+        switch (element) {
 
             case "coursesButton":
                 return this.coursesButton;

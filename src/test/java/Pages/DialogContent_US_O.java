@@ -62,6 +62,15 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement sendButton;
     @FindBy(xpath = "//*[contains(text(),'Attendance Excuse successfully sent')]")
     public WebElement successMessage;
+    @FindBy(css = "[aria-label='Open calendar']>span+svg+span")
+    public WebElement assignmentsCalendarButton;
+    @FindBy(xpath = "(//button[@class='mdc-button mat-mdc-button mat-primary mat-mdc-button-base ng-star-inserted'])[5]/span[2]")
+    public WebElement thisYearButton;
+    @FindBy(xpath = "(//button[@class='mdc-button mat-mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base']//span)[3]")
+    public WebElement searchButton;
+    @FindBy(css = "[class='ng-tns-c1534922977-39']")
+    public WebElement semesterSelectButton;
+
 
 
 public WebElement getWebelement(String element){

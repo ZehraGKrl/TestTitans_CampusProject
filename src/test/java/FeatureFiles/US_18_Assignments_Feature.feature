@@ -8,5 +8,5 @@ Feature: Assignments Functionality
 
     Given Hover-over the Assignments button
     When Verify that the number of assigned tasks appears
-#    Then Click on Assignments and verify the existence of assigned tasks in the sheet.
+    Then Click on Assignments and verify the existence of assigned tasks in the sheet.
 
