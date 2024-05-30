@@ -25,7 +25,7 @@ public class LeftNav_US_O extends ParentPage {
     @FindBy(xpath = "//span[text()='Attendance']")
     public WebElement attendanceButton;
     @FindBy(xpath = "//span[text()='Assignments']")
-    public WebElement assignmentButton;
+    public WebElement assignmentsButton;
     @FindBy(xpath = "//span[text()='Grading']")
     public WebElement gradingButton;
     @FindBy(css = "[class='mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base']")
@@ -38,6 +38,9 @@ public class LeftNav_US_O extends ParentPage {
     public WebElement newMessageButtonOpen;
     @FindBy(css = "[class='svg-inline--fa fa-angle-down fa-fw']")
     public WebElement profileSettingsButton;
+    @FindBy(css = "[class='mat-mdc-button-wrapper mdc-button mat-mdc-button mat-unthemed mat-mdc-button-base accent-800-bg']>span>span>span")
+    public WebElement assignmentsNumbers;
+
 
     public WebElement getWebelement(String element){
 
@@ -49,8 +52,8 @@ public class LeftNav_US_O extends ParentPage {
                 return this.calendarButton;
             case "attendanceButton":
                 return this.attendanceButton;
-            case "assignmentButton":
-                return this.assignmentButton;
+            case "assignmentsButton":
+                return this.assignmentsButton;
             case "gradingButton":
                 return this.gradingButton;
             case "moreButton":
