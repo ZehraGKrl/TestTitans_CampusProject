@@ -74,7 +74,7 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement semesterSelectButton;
     @FindBy(xpath = "(//body[@class='ng-tns-0-0']//mat-option)[1]")
     public WebElement semesterAllButton;
-    @FindBy(css = "[class='assignment ng-star-inserted']")
+    @FindBy(css = "[style='padding-top: 2px; font-size: 16px;']")
     public List<WebElement> assignmentsList;
 
 

@@ -7,6 +7,7 @@ import Utilities.ParentPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -47,9 +48,11 @@ public class US_18_Assignments_FeatureSteps extends ParentPage {
         dc.myJSClick(dc.semesterAllButton);
 
         List<String> assignmentslist = new ArrayList<>();
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("[style='padding-top: 2px; font-size: 16px;']")));
 
         for (WebElement e : dc.assignmentsList)
             assignmentslist.add(e.getText());
+        System.out.println("assignmentslist = " + assignmentslist);
 
 
         
