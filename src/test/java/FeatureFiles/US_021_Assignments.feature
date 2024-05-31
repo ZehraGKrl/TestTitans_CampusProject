@@ -11,4 +11,5 @@ Feature: Assignments Functionality
 
     Scenario: Assignment Functionality
       When the user clicks the assignments button
+      Then user should be able to see submit buttons
 
