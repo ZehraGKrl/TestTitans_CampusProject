@@ -88,6 +88,9 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//thead/tr/th")
     public List<WebElement> items;
 
+    @FindBy(xpath = "(//span[@class='mat-mdc-button-persistent-ripple mdc-icon-button__ripple'])[6]//following-sibling::fa-icon")
+    public WebElement submitButton;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
