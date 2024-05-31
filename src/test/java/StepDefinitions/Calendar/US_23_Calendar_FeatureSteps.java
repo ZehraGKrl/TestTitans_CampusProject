@@ -53,6 +53,35 @@ public class US_23_Calendar_FeatureSteps extends ParentPage {
 
     @Then("Click on the Weekly Course Plan button. and check and verify the required functions")
     public void clickOnTheWeeklyCoursePlanButtonAndCheckAndVerifyTheRequiredFunctions() {
+        dc.myClick(dc.weeklyCoursePlanButton);
+        List<String> weeklyCoursePlanLessonList = new ArrayList<>();
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("[class='mat-badge mat-badge-primary mat-badge-overlap mat-badge-below mat-badge-after mat-badge-small mat-badge-hidden']>div>span")));
+        for (WebElement e : dc.weeklyCoursePlanLesson) {
+            weeklyCoursePlanLessonList.add(e.getText());
+        }
+
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(0).trim().equalsIgnoreCase("11A- BIOLOGY"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(1).trim().equalsIgnoreCase("11A- CHEMISTRY"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(2).trim().equalsIgnoreCase("11A-MATHEMATICS"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(3).trim().equalsIgnoreCase("11A- GEOMETRY"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(4).trim().equalsIgnoreCase("11A-PHYSICAL"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(5).trim().equalsIgnoreCase("11A- BIOLOGY"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(6).trim().equalsIgnoreCase("11A- CHEMISTRY"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(7).trim().equalsIgnoreCase("11A-MATHEMATICS"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(8).trim().equalsIgnoreCase("11A- GEOMETRY"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(9).trim().equalsIgnoreCase("11A-PHYSICAL"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(10).trim().equalsIgnoreCase("11A- BIOLOGY"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(11).trim().equalsIgnoreCase("11A-STATISTICS"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(12).trim().equalsIgnoreCase("11A-MATHEMATICS"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(13).trim().equalsIgnoreCase("11A- GEOMETRY"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(14).trim().equalsIgnoreCase("11A-STATISTICS"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(15).trim().equalsIgnoreCase("11A-DUTCH"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(16).trim().equalsIgnoreCase("11A-DUTCH"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(17).trim().equalsIgnoreCase("11A-MATHEMATICS"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(18).trim().equalsIgnoreCase("11A-SPANISH"));
+        Assert.assertTrue(weeklyCoursePlanLessonList.get(19).trim().equalsIgnoreCase("11A-SPANISH"));
+
+
         dc.verifyContainsText(dc.weeklyCoursePlanDateRange, "27 May : Monday - 31 May : Friday");
         dc.myClick(dc.previousButton);
         dc.myClick(dc.nextButton);
@@ -63,8 +92,9 @@ public class US_23_Calendar_FeatureSteps extends ParentPage {
 
     }
 
-    @And("Click on the calendar button inside the calendar. and check and verify the required functions")
+    @And("Click on the Calendar button inside the calendar. and check and verify the required functions")
     public void clickOnTheCalendarButtonInsideTheCalendarAndCheckAndVerifyTheRequiredFunctions() {
+        dc.myClick(dc.calendarButton);
 
     }
 }

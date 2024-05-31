@@ -80,8 +80,10 @@ public class DialogContent_US_O extends ParentPage {
     public List<WebElement> calendarIcons;
     @FindBy(css = "[class='mat-accent-700-bg']+span")
     public List<WebElement> calendarIconMeanings;
-    @FindBy(css = "(//span[@class='mdc-tab__text-label'])[1]")
+    @FindBy(css = "div[role='tab']:nth-child(1)")
     public WebElement weeklyCoursePlanButton;
+    @FindBy(css = "[class='mat-badge mat-badge-primary mat-badge-overlap mat-badge-below mat-badge-after mat-badge-small mat-badge-hidden']>div>span")
+    public List<WebElement> weeklyCoursePlanLesson;
     @FindBy(xpath = "(//body[@class='ng-tns-0-0']//h4)/strong")
     public WebElement weeklyCoursePlanDateRange;
     @FindBy(css = "#mat-tab-content-0-0 > div > ms-course-schedule-board > ms-browse > div > div > div:nth-child(2) > div:nth-child(4) > button:nth-child(1) > span.mat-mdc-focus-indicator")
@@ -90,7 +92,7 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement todayButton;
     @FindBy(css = "#mat-tab-content-0-0 > div > ms-course-schedule-board > ms-browse > div > div > div:nth-child(2) > div:nth-child(4) > button:nth-child(3) > span.mat-mdc-focus-indicator")
     public WebElement nextButton;
-    @FindBy(css = "(//span[@class='mdc-tab__text-label'])[2]")
+    @FindBy(css = "div[role='tab']:nth-child(2)")
     public WebElement calendarButton;
 
 

@@ -8,4 +8,4 @@ Feature: Calendar Funtionality
       Given Click on the Calendar Button
       When Verify that the icons P=Published, S=Started, E=Ended, C=Cancelled are present.
       Then Click on the Weekly Course Plan button. and check and verify the required functions
-#      And Click on the calendar button inside the calendar. and check and verify the required functions
+      And Click on the Calendar button inside the calendar. and check and verify the required functions
