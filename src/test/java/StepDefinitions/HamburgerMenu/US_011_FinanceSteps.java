@@ -19,20 +19,12 @@ public class US_011_FinanceSteps extends ParentPage {
 
     @Then("Hover Over the Finance button")
     public void hoverOverTheFinanceButton() {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        wait(2);
 
         Actions actionDriver = new Actions(GWD.getDriver());
         actionDriver.moveToElement(lfm.financeButton).build().perform();
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        wait(2);
 
     }
 
@@ -58,14 +50,14 @@ public class US_011_FinanceSteps extends ParentPage {
     @And("User must enter card details")
     public void userMustEnterCardDetails() {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[class='__PrivateStripeElement']>iframe")));
-        WebElement frame=GWD.getDriver().findElement(By.cssSelector("[class='__PrivateStripeElement']>iframe"));
+        WebElement frame = GWD.getDriver().findElement(By.cssSelector("[class='__PrivateStripeElement']>iframe"));
         GWD.getDriver().switchTo().frame(frame);
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[name='number']")));
         dcm.mySendKeys(dcm.cardNumber, "4242 4242 4242 4242");
 
         dcm.mySendKeys(dcm.expirationNumber, "1225");
-        dcm.mySendKeys(dcm.cvcNumber,"070");
+        dcm.mySendKeys(dcm.cvcNumber, "070");
 
         GWD.getDriver().switchTo().defaultContent();
 
@@ -76,6 +68,6 @@ public class US_011_FinanceSteps extends ParentPage {
     @And("The user should receive a confirmation message that they have paid")
     public void theUserShouldReceiveAConfirmationMessageThatTheyHavePaid() {
         wait.until(ExpectedConditions.visibilityOf(dcm.confirmMessagePay));
-        dcm.verifyContainsText(dcm.confirmMessagePay,"Student Payment successfully created");
+        dcm.verifyContainsText(dcm.confirmMessagePay, "Student Payment successfully created");
     }
 }
