@@ -106,6 +106,8 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(css = "[class='tox-notification__body']")
     public WebElement errorMessage;
 
+    @FindBy(xpath = "//span[text()='From Local']")
+    public WebElement fromLocal;
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {

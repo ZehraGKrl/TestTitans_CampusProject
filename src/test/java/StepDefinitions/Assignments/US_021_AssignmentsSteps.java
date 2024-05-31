@@ -76,13 +76,24 @@ public class US_021_AssignmentsSteps extends ParentPage {
         myRobot.delay(1000);
         myRobot.keyPress(KeyEvent.VK_ENTER);
         myRobot.keyRelease(KeyEvent.VK_ENTER);
-        GWD.getDriver().switchTo().defaultContent();
+
 
         for (int i = 0; i <2 ; i++) {
             myRobot.delay(1000);
             myRobot.keyPress(KeyEvent.VK_TAB);
             myRobot.keyRelease(KeyEvent.VK_TAB);
         }
+        myRobot.delay(1000);
+        myRobot.keyPress(KeyEvent.VK_ENTER);
+        myRobot.keyRelease(KeyEvent.VK_ENTER);
+
+        GWD.getDriver().switchTo().defaultContent();
+        wait.until(ExpectedConditions.elementToBeClickable(dcm.fromLocal));
+        dcm.myJSClick(dcm.fromLocal);
+
+        myUploadFile("C:\\Users\\mert_\\Sungerbob.jpg");
+        GWD.getDriver().switchTo().defaultContent();
+
 
        // dcm.verifyContainsText(dcm.errorMessage,"Your browser doesn't support direct");
 
