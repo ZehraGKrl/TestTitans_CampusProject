@@ -100,6 +100,9 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "(//tbody/tr/td)[2]")
     public WebElement row1Column2;
 
+    @FindBy(xpath = "(//tbody/tr/td)[3]")
+    public WebElement row2Column1;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {

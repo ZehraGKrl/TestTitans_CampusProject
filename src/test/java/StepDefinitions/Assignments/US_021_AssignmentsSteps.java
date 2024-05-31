@@ -24,8 +24,9 @@ public class US_021_AssignmentsSteps extends ParentPage {
     @And("the user should be able to write in a text editor, insert images and create tables")
     public void theUserShouldBeAbleToWriteInATextEditorInsertImagesAndCreateTables() throws AWTException {
         String text = "Hello my World...";
-        String insertTable="Greetings from Test-Titans";
-        String insertTable1="Have a nice day";
+        String insertTable = "Greetings from Test-Titans";
+        String insertTable1 = "Have a nice day";
+        String insertTable2 = "Bye";
 
         Robot myRobot = new Robot();
         myRobot.mouseMove(350, 350);
@@ -41,17 +42,26 @@ public class US_021_AssignmentsSteps extends ParentPage {
         myRobot.keyPress(KeyEvent.VK_ENTER);
         myRobot.keyRelease(KeyEvent.VK_ENTER);
         myRobot.delay(1000);
-        myRobot.mouseMove(380,380);
+        myRobot.mouseMove(380, 380);
         myRobot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         myRobot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
-        dcm.mySendKeys(dcm.row1Column1,insertTable);
+        dcm.mySendKeys(dcm.row1Column1, insertTable);
 
         myRobot.delay(1000);
         myRobot.keyPress(KeyEvent.VK_TAB);
         myRobot.keyRelease(KeyEvent.VK_TAB);
 
-        dcm.mySendKeys(dcm.row1Column2,insertTable1);
+        dcm.mySendKeys(dcm.row1Column2, insertTable1);
+
+        myRobot.keyPress(KeyEvent.VK_TAB);
+        myRobot.keyRelease(KeyEvent.VK_TAB);
+
+        dcm.mySendKeys(dcm.row2Column1,insertTable2);
+
+        myRobot.mouseMove(440,420);
+        myRobot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        myRobot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
     }
 }
