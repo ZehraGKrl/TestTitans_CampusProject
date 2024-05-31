@@ -7,5 +7,8 @@ Feature: Assignments Functionality
       | passwordInput | S12345    |
     Then Click on the element in Dialog
       | loginButton |
-
     And Main page should be displayed
+
+    Scenario: Assignment Functionality
+      When the user clicks the assignments button
+
