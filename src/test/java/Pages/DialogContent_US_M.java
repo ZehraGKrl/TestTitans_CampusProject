@@ -94,6 +94,12 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(id = "tinymce")
     public WebElement editorTextScreen;
 
+    @FindBy(xpath = "(//tbody/tr/td)[1]")
+    public WebElement row1Column1;
+
+    @FindBy(xpath = "(//tbody/tr/td)[2]")
+    public WebElement row1Column2;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
