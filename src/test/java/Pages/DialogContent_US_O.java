@@ -82,7 +82,7 @@ public class DialogContent_US_O extends ParentPage {
     public List<WebElement> calendarIconMeanings;
     @FindBy(css = "(//span[@class='mdc-tab__text-label'])[1]")
     public WebElement weeklyCoursePlanButton;
-    @FindBy(css = "[class='loading-shade ng-star-inserted']+div>h4>strong")
+    @FindBy(xpath = "(//h4[@class='ng-star-inserted'])/strong")
     public WebElement weeklyCoursePlanDateRange;
     @FindBy(css = "(//span[@class='mdc-tab__text-label'])[2]")
     public WebElement calendarButton;
