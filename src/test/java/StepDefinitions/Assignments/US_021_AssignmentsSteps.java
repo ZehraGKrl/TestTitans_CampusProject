@@ -22,15 +22,12 @@ public class US_021_AssignmentsSteps extends ParentPage {
     }
 
     @And("the user should be able to write in a text editor, insert images and create tables")
-    public void theUserShouldBeAbleToWriteInATextEditorInsertImagesAndCreateTables() {
+    public void theUserShouldBeAbleToWriteInATextEditorInsertImagesAndCreateTables() throws AWTException {
         String text = "Hello my World...";
-
-        try {
-            Robot myRobot = new Robot();
-        } catch (AWTException e) {
-            throw new RuntimeException(e);
-        }
-
         WebElement frame = GWD.getDriver().findElement(By.cssSelector("[class='tox-edit-area__iframe']"));
+
+        Robot myRobot = new Robot();
+        myRobot.mouseMove(450,450);
+
     }
 }
