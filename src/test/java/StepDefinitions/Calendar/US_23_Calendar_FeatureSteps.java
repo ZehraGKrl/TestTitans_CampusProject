@@ -53,7 +53,11 @@ public class US_23_Calendar_FeatureSteps extends ParentPage {
 
     @Then("Click on the Weekly Course Plan button. and check and verify the required functions")
     public void clickOnTheWeeklyCoursePlanButtonAndCheckAndVerifyTheRequiredFunctions() {
-      dc.verifyContainsText(dc.weeklyCoursePlanDateRange, "27 May : Monday - 31 May : Friday ");
+        dc.verifyContainsText(dc.weeklyCoursePlanDateRange, "27 May : Monday - 31 May : Friday");
+        dc.myClick(dc.previousButton);
+        dc.myClick(dc.nextButton);
+        dc.myClick(dc.nextButton);
+        dc.myClick(dc.todayButton);
 
 
 

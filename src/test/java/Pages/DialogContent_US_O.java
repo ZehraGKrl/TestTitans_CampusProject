@@ -82,8 +82,14 @@ public class DialogContent_US_O extends ParentPage {
     public List<WebElement> calendarIconMeanings;
     @FindBy(css = "(//span[@class='mdc-tab__text-label'])[1]")
     public WebElement weeklyCoursePlanButton;
-    @FindBy(xpath = "(//h4[@class='ng-star-inserted'])/strong")
+    @FindBy(xpath = "(//body[@class='ng-tns-0-0']//h4)/strong")
     public WebElement weeklyCoursePlanDateRange;
+    @FindBy(css = "#mat-tab-content-0-0 > div > ms-course-schedule-board > ms-browse > div > div > div:nth-child(2) > div:nth-child(4) > button:nth-child(1) > span.mat-mdc-focus-indicator")
+    public WebElement previousButton;
+    @FindBy(css = "#mat-tab-content-0-0 > div > ms-course-schedule-board > ms-browse > div > div > div:nth-child(2) > div:nth-child(4) > button:nth-child(2) > span.mat-mdc-focus-indicator")
+    public WebElement todayButton;
+    @FindBy(css = "#mat-tab-content-0-0 > div > ms-course-schedule-board > ms-browse > div > div > div:nth-child(2) > div:nth-child(4) > button:nth-child(3) > span.mat-mdc-focus-indicator")
+    public WebElement nextButton;
     @FindBy(css = "(//span[@class='mdc-tab__text-label'])[2]")
     public WebElement calendarButton;
 
