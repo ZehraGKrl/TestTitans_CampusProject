@@ -70,5 +70,10 @@ public class US_021_AssignmentsSteps extends ParentPage {
         myRobot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         myRobot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
+        myUploadFile("C:\\Users\\mert_\\Sungerbob.jpg");
+        myRobot.delay(1000);
+        myRobot.keyPress(KeyEvent.VK_ENTER);
+        myRobot.keyRelease(KeyEvent.VK_ENTER);
+
     }
 }
