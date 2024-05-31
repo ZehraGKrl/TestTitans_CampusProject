@@ -41,35 +41,6 @@ public class LeftNav_US_O extends ParentPage {
     @FindBy(xpath = "//div[@class='cdk-overlay-container']/div")
     public WebElement assignmentsNumbers;
 
-    public WebElement getWebelement(String element){
-
-        switch (element) {
-
-            case "coursesButton":
-                return this.coursesButton;
-            case "calendarButton":
-                return this.calendarButton;
-            case "attendanceButton":
-                return this.attendanceButton;
-            case "assignmentsButton":
-                return this.assignmentsButton;
-            case "gradingButton":
-                return this.gradingButton;
-            case "moreButton":
-                return this.moreButton;
-            case "chatButtonOpen":
-                return this.chatButtonOpen;
-            case "closeButton":
-                return this.closeButton;
-            case "newMessageButtonOpen":
-                return this.newMessageButtonOpen;
-            case "profileSettingsButton":
-                return this.profileSettingsButton;
-
-        }
-        return null;
-    }
-
 
 
 

@@ -3,19 +3,21 @@ package StepDefinitions.Home;
 import Pages.DialogContent_US_O;
 import Pages.LeftNav_US_O;
 import Utilities.GWD;
+import Utilities.ParentPage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
-public class US_3_HomeSteps {
+public class US_3_HomeSteps extends ParentPage {
 
-    DialogContent_US_O dc=new DialogContent_US_O();
-    LeftNav_US_O ln=new LeftNav_US_O();
+    DialogContent_US_O dc = new DialogContent_US_O();
+    LeftNav_US_O ln = new LeftNav_US_O();
 
     @Given("Navigate to Campus")
     public void navigateToCampus() {
@@ -30,15 +32,20 @@ public class US_3_HomeSteps {
     }
 
     @Given("Click on all buttons in the tab menu")
-    public void clickOnAllButtonsInTheTabMenu(DataTable tabMenuButtons) {
-        List<String> tabMenuButtonList=tabMenuButtons.asList(String.class);
+    public void clickOnAllButtonsInTheTabMenu() {
+        ln.myClick(ln.coursesButton);
+        ln.myClick(ln.calendarButton);
+        ln.myClick(ln.attendanceButton);
+        ln.myClick(ln.assignmentsButton);
+        ln.myClick(ln.gradingButton);
+        ln.myClick(ln.moreButton);
+        new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
+        ln.myClick(ln.chatButtonOpen);
+        ln.myClick(ln.closeButton);
+        ln.myClick(ln.newMessageButtonOpen);
+        ln.myClick(ln.closeButton);
+        ln.myClick(ln.profileSettingsButton);
 
-        for (int i = 0; i < tabMenuButtonList.size(); i++) {
-            WebElement webElement = ln.getWebelement(tabMenuButtonList.get(i));
-            ln.myClick(webElement);
-            new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
-
-        }
 
         GWD.quitDriver();
     }

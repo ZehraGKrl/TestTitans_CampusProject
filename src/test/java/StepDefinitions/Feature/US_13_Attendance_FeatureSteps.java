@@ -35,9 +35,15 @@ public class US_13_Attendance_FeatureSteps extends ParentPage {
     public void enterAnExcuse() {
         wait.until(ExpectedConditions.visibilityOf(dc.addButon));
         dc.myJSClick(dc.addButon);
-        dc.myClick(dc.attendanceCalendarButton);
+        wait(1000);
+        wait.until(ExpectedConditions.visibilityOf(dc.attendanceCalendarButton));
+        wait(1000);
+        dc.myJSClick(dc.attendanceCalendarButton);
+        wait(1000);
         dc.hoverOver(dc.dateButton);
-        dc.myClick(dc.dateButton);
+        wait(1000);
+        dc.myJSClick(dc.dateButton);
+        wait(1000);
         dc.mySendKeys(dc.messageButton,"Cenazemiz var :D");
 
     }
