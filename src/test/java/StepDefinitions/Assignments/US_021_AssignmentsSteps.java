@@ -67,7 +67,8 @@ public class US_021_AssignmentsSteps extends ParentPage {
         myRobot.delay(1000);
         myRobot.keyPress(KeyEvent.VK_ENTER);
         myRobot.keyRelease(KeyEvent.VK_ENTER);
-        myRobot.mouseMove(356, 380);
+        myRobot.mouseMove(353, 380);
+        myRobot.delay(1000);
         myRobot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         myRobot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
@@ -76,6 +77,14 @@ public class US_021_AssignmentsSteps extends ParentPage {
         myRobot.keyPress(KeyEvent.VK_ENTER);
         myRobot.keyRelease(KeyEvent.VK_ENTER);
         GWD.getDriver().switchTo().defaultContent();
+
+        for (int i = 0; i <2 ; i++) {
+            myRobot.delay(1000);
+            myRobot.keyPress(KeyEvent.VK_TAB);
+            myRobot.keyRelease(KeyEvent.VK_TAB);
+        }
+
+       // dcm.verifyContainsText(dcm.errorMessage,"Your browser doesn't support direct");
 
     }
 }
