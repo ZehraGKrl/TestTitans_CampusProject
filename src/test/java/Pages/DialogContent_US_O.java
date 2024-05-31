@@ -94,6 +94,20 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement nextButton;
     @FindBy(css = "div[role='tab']:nth-child(2)")
     public WebElement calendarButton;
+    @FindBy(css = "[class='fc-prevCalendar-button fc-button fc-button-primary']>span")
+    public WebElement calendarLeftButton;
+    @FindBy(css = "[class='fc-nextCalendar-button fc-button fc-button-primary']>span")
+    public WebElement calendarRightButton;
+    @FindBy(css = "[class='fc-todayCalendar-button fc-button fc-button-primary']")
+    public WebElement calendarTodayButton;
+    @FindBy(css = "[class='fc-weekCalendar-button fc-button fc-button-primary']")
+    public WebElement weekButton;
+    @FindBy(xpath = "(//div[@class='fc-button-group']//button)[4]")
+    public WebElement mounthButton;
+    @FindBy(css = "[class='fc-dayCalendar-button fc-button fc-button-primary']")
+    public WebElement dayButton;
+    @FindBy(css = "[class='mat-badge mat-badge-primary mat-badge-overlap mat-badge-below mat-badge-after mat-badge-small mat-badge-hidden']>div>span")
+    public WebElement biologyLesson;
 
 
 

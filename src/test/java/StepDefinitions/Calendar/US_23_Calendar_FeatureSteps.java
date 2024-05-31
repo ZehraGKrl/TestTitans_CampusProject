@@ -88,13 +88,21 @@ public class US_23_Calendar_FeatureSteps extends ParentPage {
         dc.myClick(dc.nextButton);
         dc.myClick(dc.todayButton);
 
-
-
     }
 
     @And("Click on the Calendar button inside the calendar. and check and verify the required functions")
     public void clickOnTheCalendarButtonInsideTheCalendarAndCheckAndVerifyTheRequiredFunctions() {
         dc.myClick(dc.calendarButton);
+        wait.until(ExpectedConditions.visibilityOf(dc.calendarLeftButton));
+        dc.myJSClick(dc.calendarLeftButton);
+        dc.myJSClick(dc.calendarRightButton);
+        dc.myJSClick(dc.calendarRightButton);
+        dc.myJSClick(dc.calendarTodayButton);
+        dc.myJSClick(dc.weekButton);
+        dc.myJSClick(dc.mounthButton);
+        dc.myJSClick(dc.dayButton);
+        dc.myJSClick(dc.weeklyCoursePlanButton);
+        dc.myClick(dc.biologyLesson);
 
     }
 }
