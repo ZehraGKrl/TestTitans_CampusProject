@@ -76,6 +76,17 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement semesterAllButton;
     @FindBy(css = "[style='padding-top: 2px; font-size: 16px;']")
     public List<WebElement> assignmentsList;
+    @FindBy(css = "[class='mat-accent-700-bg']")
+    public List<WebElement> calendarIcons;
+    @FindBy(css = "[class='mat-accent-700-bg']+span")
+    public List<WebElement> calendarIconMeanings;
+    @FindBy(css = "(//span[@class='mdc-tab__text-label'])[1]")
+    public WebElement weeklyCoursePlanButton;
+    @FindBy(css = "[class='loading-shade ng-star-inserted']+div>h4>strong")
+    public WebElement weeklyCoursePlanDateRange;
+    @FindBy(css = "(//span[@class='mdc-tab__text-label'])[2]")
+    public WebElement calendarButton;
+
 
 
 
