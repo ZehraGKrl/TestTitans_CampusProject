@@ -1,6 +1,7 @@
 package StepDefinitions.Assignments;
 
 import Pages.DialogContent_US_M;
+import Utilities.GWD;
 import Utilities.ParentPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -74,6 +75,7 @@ public class US_021_AssignmentsSteps extends ParentPage {
         myRobot.delay(1000);
         myRobot.keyPress(KeyEvent.VK_ENTER);
         myRobot.keyRelease(KeyEvent.VK_ENTER);
+        GWD.getDriver().switchTo().defaultContent();
 
     }
 }
