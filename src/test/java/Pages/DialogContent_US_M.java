@@ -91,6 +91,9 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "(//span[@class='mat-mdc-button-persistent-ripple mdc-icon-button__ripple'])[6]//following-sibling::fa-icon")
     public WebElement submitButton;
 
+    @FindBy(id = "tinymce")
+    public WebElement editorTextScreen;
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
