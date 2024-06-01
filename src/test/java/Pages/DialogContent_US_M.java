@@ -127,6 +127,15 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//div[text()='Successfully saved as a draft']")
     public WebElement confirmMessage2;
 
+    @FindBy(xpath = "(//span[@class='mdc-button__label'])[16]")
+    public WebElement submitButton1;
+
+    @FindBy(xpath = "((//span[@class='mat-mdc-button-persistent-ripple mdc-button__ripple'])[19]//following-sibling::span)[4]")
+    public WebElement yesButton;
+
+    @FindBy(xpath = "//div[text()='Successfully submitted to rewiev']")
+    public WebElement confirmSubmit;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "usernameInput":

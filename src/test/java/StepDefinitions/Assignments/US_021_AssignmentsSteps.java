@@ -112,4 +112,14 @@ public class US_021_AssignmentsSteps extends ParentPage {
         dcm.verifyContainsText(dcm.confirmMessage2,"Successfully");
         GWD.getDriver().switchTo().defaultContent();
     }
+
+    @Then("user must click submit button and see the verification message")
+    public void userMustClickSubmitButtonAndSeeTheVerificationMessage() {
+        wait.until(ExpectedConditions.elementToBeClickable(dcm.submitButton1));
+        dcm.myClick(dcm.submitButton1);
+        wait.until(ExpectedConditions.elementToBeClickable(dcm.yesButton));
+        dcm.myClick(dcm.yesButton);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[text()='Successfully submitted to rewiev']")));
+
+    }
 }
