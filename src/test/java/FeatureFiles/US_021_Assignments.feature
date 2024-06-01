@@ -13,4 +13,5 @@ Feature: Assignments Functionality
       When the user clicks the assignments button
       Then user should be able to see submit button and click button
       And the user should be able to write in a text editor, insert images and create tables
+      And user should receive a verification message when they save as draft
 

@@ -98,14 +98,18 @@ public class US_021_AssignmentsSteps extends ParentPage {
         dcm.myJSClick(dcm.image);
         wait.until(ExpectedConditions.elementToBeClickable(dcm.edit));
         dcm.myJSClick(dcm.edit);
-        wait.until(ExpectedConditions.elementToBeClickable(dcm.image));
-        dcm.myJSClick(dcm.image);
+        wait.until(ExpectedConditions.elementToBeClickable(dcm.paste));
+        dcm.myJSClick(dcm.paste);
+        dcm.verifyContainsText(dcm.errorMessage,"Your browser doesn't support direct");
+
+    }
+
+    @And("user should receive a verification message when they save as draft")
+    public void userShouldReceiveAVerificationMessageWhenTheySaveAsDraft() {
         wait.until(ExpectedConditions.elementToBeClickable(dcm.saveAsDraft));
         dcm.myJSClick(dcm.saveAsDraft);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[text()='Successfully saved as a draft']")));
+        dcm.verifyContainsText(dcm.confirmMessage2,"Successfully");
         GWD.getDriver().switchTo().defaultContent();
-
-
-       // dcm.verifyContainsText(dcm.errorMessage,"Your browser doesn't support direct");
-
     }
 }

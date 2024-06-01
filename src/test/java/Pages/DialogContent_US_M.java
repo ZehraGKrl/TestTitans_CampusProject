@@ -121,8 +121,11 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//span[text()='Edit']")
     public WebElement edit;
 
-    @FindBy(xpath = "//div[text()='Copy']")
-    public WebElement copy;
+    @FindBy(xpath = "//div[text()='Paste']")
+    public WebElement paste;
+
+    @FindBy(xpath = "//div[text()='Successfully saved as a draft']")
+    public WebElement confirmMessage2;
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
