@@ -109,6 +109,15 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//span[text()='From Local']")
     public WebElement fromLocal;
 
+    @FindBy(xpath = "//span[text()='Save as Draft']")
+    public WebElement saveAsDraft;
+
+    @FindBy(xpath = "(//mat-select)[4]")
+    public WebElement file;
+
+    @FindBy(xpath = "//span[text()=' Image ']")
+    public WebElement image;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "usernameInput":
