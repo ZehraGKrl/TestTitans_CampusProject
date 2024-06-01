@@ -52,7 +52,7 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement addButon;
     @FindBy(xpath = "((//ms-date[@class='w-100-p floating ng-untouched ng-pristine ng-valid ng-star-inserted']//div)[9]//span)[2]")
     public WebElement attendanceCalendarButton;
-    @FindBy(xpath = "(//tbody[@class='mat-calendar-body']//td)[33]")
+    @FindBy(xpath = "(//tbody[@class='mat-calendar-body']//span)[5]")
     public WebElement dateButton;
     @FindBy(css = "[placeholder='Message']")
     public WebElement messageButton;
@@ -120,42 +120,6 @@ public WebElement getWebelement(String element){
             return this.moreButton;
         case "financeButton":
             return this.financeButton;
-        case "myFinanceButton":
-            return this.myFinanceButton;
-        case "viewButton":
-            return this.viewButton;
-        case "stripeButton":
-            return this.stripeButton;
-        case "payButton":
-            return this.payButton;
-        case "payInFullButton":
-            return this.payInFullButton;
-        case "amountButton":
-            return this.amountButton;
-        case "cardNumberButton":
-            return this.cardNumberButton;
-        case "expirationButton":
-            return this.expirationButton;
-        case "cvcButton":
-            return this.cvcButton;
-        case "stripePaymentsButton":
-            return this.stripePaymentsButton;
-        case "paymentButton":
-            return this.paymentButton;
-        case "attendanceButton":
-            return this.attendanceButton;
-        case "attendanceExcuseButton":
-            return this.attendanceExcuseButton;
-        case "addButon":
-            return this.addButon;
-        case "AttendanceCalendarButton":
-            return this.attendanceCalendarButton;
-        case "dateButton":
-            return this.dateButton;
-        case "messageButton":
-            return this.messageButton;
-        case "attachFilesButton":
-            return this.attachFilesButton;
 
     }
     return null;
