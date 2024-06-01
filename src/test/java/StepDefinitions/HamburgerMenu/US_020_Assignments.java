@@ -17,6 +17,7 @@ public class US_020_Assignments extends ParentPage {
 
     @When("the user clicks the assignments button")
     public void theUserClicksTheAssignmentsButton() throws AWTException {
+        wait.until(ExpectedConditions.urlToBe("https://test.mersys.io/user-courses"));
 
         Robot robot = new Robot();
 

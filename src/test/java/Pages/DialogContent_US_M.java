@@ -88,6 +88,53 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//thead/tr/th")
     public List<WebElement> items;
 
+    @FindBy(xpath = "(//span[@class='mat-mdc-button-persistent-ripple mdc-icon-button__ripple'])[6]//following-sibling::fa-icon")
+    public WebElement submitButton;
+
+    @FindBy(id = "tinymce")
+    public WebElement editorTextScreen;
+
+    @FindBy(xpath = "(//tbody/tr/td)[1]")
+    public WebElement row1Column1;
+
+    @FindBy(xpath = "(//tbody/tr/td)[2]")
+    public WebElement row1Column2;
+
+    @FindBy(xpath = "(//tbody/tr/td)[3]")
+    public WebElement row2Column1;
+
+    @FindBy(css = "[class='tox-notification__body']")
+    public WebElement errorMessage;
+
+    @FindBy(xpath = "//span[text()='From Local']")
+    public WebElement fromLocal;
+
+    @FindBy(xpath = "//span[text()='Save as Draft']")
+    public WebElement saveAsDraft;
+
+    @FindBy(xpath = "(//mat-select)[4]")
+    public WebElement file;
+
+    @FindBy(xpath = "//span[text()=' Image ']")
+    public WebElement image;
+
+    @FindBy(xpath = "//span[text()='Edit']")
+    public WebElement edit;
+
+    @FindBy(xpath = "//div[text()='Paste']")
+    public WebElement paste;
+
+    @FindBy(xpath = "//div[text()='Successfully saved as a draft']")
+    public WebElement confirmMessage2;
+
+    @FindBy(xpath = "//span[text()='Submit']")
+    public WebElement submitButton1;
+
+    @FindBy(xpath = "((//span[@class='mat-mdc-button-persistent-ripple mdc-button__ripple'])[20]//following-sibling::span)[1]")
+    public WebElement yesButton;
+
+    @FindBy(xpath = "//div[text()='Successfully submitted to review']")
+    public WebElement confirmSubmit;
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
