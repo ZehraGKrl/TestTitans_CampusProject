@@ -118,6 +118,12 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//span[text()=' Image ']")
     public WebElement image;
 
+    @FindBy(xpath = "//span[text()='Edit']")
+    public WebElement edit;
+
+    @FindBy(xpath = "//div[text()='Copy']")
+    public WebElement copy;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "usernameInput":

@@ -96,6 +96,10 @@ public class US_021_AssignmentsSteps extends ParentPage {
         dcm.myJSClick(dcm.file);
         wait.until(ExpectedConditions.elementToBeClickable(dcm.image));
         dcm.myJSClick(dcm.image);
+        wait.until(ExpectedConditions.elementToBeClickable(dcm.edit));
+        dcm.myJSClick(dcm.edit);
+        wait.until(ExpectedConditions.elementToBeClickable(dcm.image));
+        dcm.myJSClick(dcm.image);
         wait.until(ExpectedConditions.elementToBeClickable(dcm.saveAsDraft));
         dcm.myJSClick(dcm.saveAsDraft);
         GWD.getDriver().switchTo().defaultContent();
