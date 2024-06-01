@@ -127,13 +127,13 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//div[text()='Successfully saved as a draft']")
     public WebElement confirmMessage2;
 
-    @FindBy(xpath = "(//span[@class='mdc-button__label'])[16]")
+    @FindBy(xpath = "//span[text()='Submit']")
     public WebElement submitButton1;
 
-    @FindBy(xpath = "((//span[@class='mat-mdc-button-persistent-ripple mdc-button__ripple'])[19]//following-sibling::span)[4]")
+    @FindBy(xpath = "((//span[@class='mat-mdc-button-persistent-ripple mdc-button__ripple'])[20]//following-sibling::span)[1]")
     public WebElement yesButton;
 
-    @FindBy(xpath = "//div[text()='Successfully submitted to rewiev']")
+    @FindBy(xpath = "//div[text()='Successfully submitted to review']")
     public WebElement confirmSubmit;
 
     public WebElement getWebElement(String strElement) {

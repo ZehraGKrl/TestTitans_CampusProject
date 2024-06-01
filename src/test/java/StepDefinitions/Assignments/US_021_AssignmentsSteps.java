@@ -110,16 +110,16 @@ public class US_021_AssignmentsSteps extends ParentPage {
         dcm.myJSClick(dcm.saveAsDraft);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[text()='Successfully saved as a draft']")));
         dcm.verifyContainsText(dcm.confirmMessage2,"Successfully");
-        GWD.getDriver().switchTo().defaultContent();
     }
 
     @Then("user must click submit button and see the verification message")
     public void userMustClickSubmitButtonAndSeeTheVerificationMessage() {
         wait.until(ExpectedConditions.elementToBeClickable(dcm.submitButton1));
-        dcm.myClick(dcm.submitButton1);
+        dcm.myJSClick(dcm.submitButton1);
         wait.until(ExpectedConditions.elementToBeClickable(dcm.yesButton));
-        dcm.myClick(dcm.yesButton);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[text()='Successfully submitted to rewiev']")));
-
+        dcm.myJSClick(dcm.yesButton);
+        wait.until(ExpectedConditions.textToBePresentInElement(dcm.confirmSubmit,"Successfully submitted to review"));
+        dcm.verifyContainsText(dcm.confirmSubmit,"Successfully submitted");
+        GWD.getDriver().switchTo().defaultContent();
     }
 }
