@@ -40,5 +40,10 @@ Feature: Hambuurger Menu Messaging Functionality
     Then Click on the element Top Menu
       | hamburgerMenu |
 
+    And Hover Over the messaging button
+
+    Then Click on the element in Hamburger Menu
+      | trashButton1 |
+
 
 

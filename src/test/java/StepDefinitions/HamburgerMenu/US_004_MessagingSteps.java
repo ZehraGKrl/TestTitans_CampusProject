@@ -48,9 +48,4 @@ public class US_004_MessagingSteps extends ParentPage {
             dcm.myClick(buttonWebElement);
         }
     }
-
-    @And("Driver navigate back")
-    public void driverNavigateBack() {
-        GWD.getDriver().navigate().back();
-    }
 }
