@@ -17,3 +17,9 @@ Feature: Hambuurger Menu Messaging Functionality
     And Hover Over the messaging button
 
     Then User should be able to see related buttons
+
+    Then Click on the element in Hamburger Menu
+      | messageButton |
+      | inboxButton   |
+      | outboxButton  |
+      | trashButton   |
