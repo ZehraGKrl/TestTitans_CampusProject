@@ -139,6 +139,9 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//span[text()='New Message']")
     public WebElement messageButton;
 
+    @FindBy(xpath = "//span[text()='Inbox']")
+    public WebElement inboxButton;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "usernameInput":
