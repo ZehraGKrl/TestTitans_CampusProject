@@ -136,6 +136,9 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//div[text()='Successfully submitted to review']")
     public WebElement confirmSubmit;
 
+    @FindBy(xpath = "//span[text()='New Message']")
+    public WebElement messageButton;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "usernameInput":
