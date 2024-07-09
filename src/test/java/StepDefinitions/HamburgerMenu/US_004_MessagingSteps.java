@@ -5,6 +5,7 @@ import Pages.LeftNav_US_M;
 import Utilities.GWD;
 import Utilities.ParentPage;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -45,8 +46,11 @@ public class US_004_MessagingSteps extends ParentPage {
         for (int i = 0; i < buttonList.size(); i++) {
             WebElement buttonWebElement = dcm.getWebElement(buttonList.get(i));
             dcm.myClick(buttonWebElement);
-
-            dcm.myJSClick(lfm.hamburgerMenu);
         }
+    }
+
+    @And("Driver navigate back")
+    public void driverNavigateBack() {
+        GWD.getDriver().navigate().back();
     }
 }

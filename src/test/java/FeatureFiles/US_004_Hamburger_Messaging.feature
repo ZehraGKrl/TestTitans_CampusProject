@@ -20,6 +20,25 @@ Feature: Hambuurger Menu Messaging Functionality
 
     Then Click on the element in Hamburger Menu
       | messageButton |
-      | inboxButton   |
-      | outboxButton  |
-      | trashButton   |
+
+    Then Click on the element Top Menu
+      | hamburgerMenu |
+
+    And Hover Over the messaging button
+
+    Then Click on the element in Hamburger Menu
+      | inboxButton |
+
+    Then  Click on the element Top Menu
+      | hamburgerMenu |
+
+    And Hover Over the messaging button
+
+    Then Click on the element in Hamburger Menu
+      | outboxButton |
+
+    Then Click on the element Top Menu
+      | hamburgerMenu |
+
+
+
