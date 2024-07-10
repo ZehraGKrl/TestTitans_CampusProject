@@ -24,7 +24,7 @@ public class US_14_ProfileSteps extends ParentPage {
     @Then("Verification that you are on the settings page")
     public void verificationThatYouAreOnTheSettingsPage() {
         wait.until(ExpectedConditions.elementToBeClickable(dc.profilePicture));
-        Assert.assertTrue(pp.profilePicture.isDisplayed());
+        Assert.assertTrue(dc.profilePicture.isDisplayed());
     }
 
     @When("Click on the profile picture and upload button")
