@@ -145,6 +145,9 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//span[text()='Trash']")
     public WebElement trashButton1;
 
+    @FindBy(xpath = "//span[text()='Fee/Balance Detail']")
+    public WebElement feeBalanceDetailButton;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "usernameInput":
