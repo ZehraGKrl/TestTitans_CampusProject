@@ -108,11 +108,24 @@ public class DialogContent_US_O extends ParentPage {
     public WebElement dayButton;
     @FindBy(css = "[class='mat-badge mat-badge-primary mat-badge-overlap mat-badge-below mat-badge-after mat-badge-small mat-badge-hidden']>div>span")
     public WebElement biologyLesson;
+    @FindBy(xpath = "//span[contains(text(),'Settings')]")
+    public WebElement settingsButton;
+    @FindBy(css = "[class= 'profile-image avatar huge ng-star-inserted']")
+    public WebElement profilePicture;
+    @FindBy(css = "[data-icon='upload']")
+    public WebElement uploadButton;
+    @FindBy(xpath = "//*[text()=' Upload ']")
+    public WebElement uploadButton2;
+    @FindBy(css = "ms-save-button fa-icon+span")
+    public WebElement saveButton;
+    @FindBy(xpath = "//*[text()='Profile successfully updated']")
+    public WebElement verifyPhoto;
 
 
 
 
-public WebElement getWebelement(String element){
+
+    public WebElement getWebelement(String element){
 
     switch (element) {
 
