@@ -176,6 +176,8 @@ public class DialogContent_US_M extends ParentPage {
                 return  this.inboxButton;
             case "trashButton1":
                 return this.trashButton1;
+            case "feeBalanceDetailButton":
+                return this.feeBalanceDetailButton;
 
 
 

@@ -17,5 +17,8 @@ Feature: Finance Functionality
     Then Hover Over the Finance button
 
     And Click on the element in Dialog
-      | MyFinanceButton |
-      | viewButton      |
+      | MyFinanceButton        |
+      | viewButton             |
+      | feeBalanceDetailButton |
+
+    And User should see the installment table
