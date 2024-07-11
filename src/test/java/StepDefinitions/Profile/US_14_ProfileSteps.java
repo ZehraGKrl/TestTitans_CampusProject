@@ -42,14 +42,6 @@ public class US_14_ProfileSteps extends ParentPage {
     public void selectThePhotoToUploadFromTheFiles() {
         dc.myUploadFile("C:\\Users\\ozi_9\\Süngerbob.jpg");
 
-        Set<String> windowHandles = GWD.getDriver().getWindowHandles();
-
-        for (String handle : windowHandles) {
-            GWD.getDriver().switchTo().window(handle);
-            if (GWD.getDriver().getTitle().contains("Upload")) {
-                break;
-            }
-        }
     }
 
     @And("After taking the photo, click the Upload button and save button")
