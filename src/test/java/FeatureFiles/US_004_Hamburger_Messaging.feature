@@ -1,4 +1,4 @@
-Feature: Hambuurger Menu Messaging Functionality
+Feature: Hamburger Menu Messaging Functionality
 
   Background:
     Given Navigate to Campus
