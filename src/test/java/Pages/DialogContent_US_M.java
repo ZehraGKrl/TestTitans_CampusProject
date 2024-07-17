@@ -182,6 +182,18 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//span[text()='Student_1 11A']")
     public WebElement newContacts;
 
+    @FindBy(xpath = "//div/textarea")
+    public WebElement messageInput;
+
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[52]")
+    public WebElement sendMessageButton;
+
+    @FindBy(xpath = "//div/bdi")
+    public WebElement messageLocator;
+
+    @FindBy(xpath = "(//ms-dialog-content/div//div/div)[61]")
+    public WebElement confirmDateText;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "usernameInput":

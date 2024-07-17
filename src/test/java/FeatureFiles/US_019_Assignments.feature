@@ -31,3 +31,5 @@ Feature: Assignment Functionality
     Then User should be able to click the attach files button
 
     Then User should be able to open a new discussion
+
+    And When the user sends their message, the message text (attach file name if available) and send message should also be able to see the date and time in a stream
