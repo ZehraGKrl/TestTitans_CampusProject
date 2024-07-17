@@ -154,6 +154,15 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//div[text()=' Debit ']")
     public WebElement debitText;
 
+    @FindBy(css = "[class='mat-datepicker-toggle-default-icon ng-star-inserted']+span")
+    public WebElement dateButton;
+
+    @FindBy(xpath = "//span[text()=' This year ']")
+    public WebElement thisYearButton;
+
+    @FindBy(xpath = "//span[text()='Search']")
+    public WebElement searchButton;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "usernameInput":
@@ -184,6 +193,12 @@ public class DialogContent_US_M extends ParentPage {
                 return this.trashButton1;
             case "feeBalanceDetailButton":
                 return this.feeBalanceDetailButton;
+            case "dateButton":
+                return this.dateButton;
+            case "thisYearButton":
+                return this.thisYearButton;
+            case "searchButton":
+                return this.searchButton;
 
 
 

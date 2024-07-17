@@ -13,3 +13,8 @@ Feature: Assignment Functionality
 
     And Click on the element Top Menu
       | assignmentsButton |
+
+    Then Click on the element in Dialog
+      | dateButton     |
+      | thisYearButton |
+      | searchButton   |
