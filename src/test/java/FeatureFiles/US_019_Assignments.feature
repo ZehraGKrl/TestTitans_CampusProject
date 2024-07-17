@@ -8,3 +8,8 @@ Feature: Assignment Functionality
     Then Click on the element in Dialog
       | loginButton |
     And Main page should be displayed
+
+  Scenario: Assignment Functionality
+
+    And Click on the element Top Menu
+      | assignmentsButton |
