@@ -17,4 +17,7 @@ Feature: Assignment Functionality
     Then Click on the element in Dialog
       | dateButton     |
       | thisYearButton |
-      | searchButton   |
+
+    And Click on the search button
+
+    Then Click on the lesson in assignments page

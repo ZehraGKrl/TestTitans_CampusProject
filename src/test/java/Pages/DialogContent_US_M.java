@@ -160,8 +160,11 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//span[text()=' This year ']")
     public WebElement thisYearButton;
 
-    @FindBy(xpath = "//span[text()='Search']")
+    @FindBy(xpath = "(//button[@class='mdc-button mat-mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base']//span)[3]")
     public WebElement searchButton;
+
+    @FindBy(xpath = "(//div[@class='assignment ng-star-inserted']//following::strong)[1]")
+    public WebElement lesson;
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
@@ -199,6 +202,8 @@ public class DialogContent_US_M extends ParentPage {
                 return this.thisYearButton;
             case "searchButton":
                 return this.searchButton;
+            case "lesson":
+                return this.lesson;
 
 
 
