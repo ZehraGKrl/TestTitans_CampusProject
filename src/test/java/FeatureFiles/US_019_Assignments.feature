@@ -21,3 +21,7 @@ Feature: Assignment Functionality
     And Click on the search button
 
     Then Click on the lesson in assignments page
+
+    Then User should be able to start a discussion
+
+    Then User should be able to click the chat button

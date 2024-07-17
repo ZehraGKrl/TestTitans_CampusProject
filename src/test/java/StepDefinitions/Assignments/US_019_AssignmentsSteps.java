@@ -21,4 +21,16 @@ public class US_019_AssignmentsSteps extends ParentPage {
         dcm.wait.until(ExpectedConditions.elementToBeClickable(dcm.lesson));
         dcm.myJSClick(dcm.lesson);
     }
+
+    @Then("User should be able to start a discussion")
+    public void userShouldBeAbleToStartADiscussion() {
+        dcm.wait.until(ExpectedConditions.elementToBeClickable(dcm.discussionButton));
+        dcm.myJSClick(dcm.discussionButton);
+    }
+
+    @Then("User should be able to click the chat button")
+    public void userShouldBeAbleToClickTheChatButton() {
+        dcm.wait.until(ExpectedConditions.elementToBeClickable(dcm.chatButton));
+        dcm.myJSClick(dcm.chatButton);
+    }
 }
