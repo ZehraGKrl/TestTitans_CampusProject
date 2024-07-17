@@ -1,11 +1,19 @@
 package StepDefinitions.Assignments;
 
 import Pages.DialogContent_US_M;
+import Utilities.GWD;
 import Utilities.ParentPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.KeyEvent;
 
 public class US_019_AssignmentsSteps extends ParentPage {
     DialogContent_US_M dcm = new DialogContent_US_M();
@@ -42,8 +50,21 @@ public class US_019_AssignmentsSteps extends ParentPage {
     }
 
     @Then("User should be able to click the attach files button")
-    public void userShouldBeAbleToClickTheAttachFilesButton() {
+    public void userShouldBeAbleToClickTheAttachFilesButton() throws AWTException {
         wait.until(ExpectedConditions.visibilityOf(dcm.attachFilesButton));
         dcm.myClick(dcm.attachFilesButton);
+
+        Robot myRobot=new Robot();
+        myRobot.delay(1000);
+        myRobot.keyPress(KeyEvent.VK_ESCAPE);
+        myRobot.keyRelease(KeyEvent.VK_ESCAPE);
+
+
+    }
+
+    @Then("User should be able to open a new discussion")
+    public void userShouldBeAbleToOpenANewDiscussion() {
+        wait.until(ExpectedConditions.visibilityOf(dcm.newContacts));
+        dcm.myClick(dcm.newContacts);
     }
 }

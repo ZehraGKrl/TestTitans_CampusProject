@@ -179,6 +179,9 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[49]")
     public WebElement attachFilesButton;
 
+    @FindBy(xpath = "//span[text()='Student_1 11A']")
+    public WebElement newContacts;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "usernameInput":
