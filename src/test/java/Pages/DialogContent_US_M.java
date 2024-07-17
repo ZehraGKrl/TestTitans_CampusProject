@@ -136,6 +136,15 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//div[text()='Successfully submitted to review']")
     public WebElement confirmSubmit;
 
+    @FindBy(xpath = "//span[text()='New Message']")
+    public WebElement messageButton;
+
+    @FindBy(xpath = "//span[text()='Inbox']")
+    public WebElement inboxButton;
+
+    @FindBy(xpath = "//span[text()='Trash']")
+    public WebElement trashButton1;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "usernameInput":
@@ -158,6 +167,13 @@ public class DialogContent_US_M extends ParentPage {
                 return this.payAmountDue;
             case "payButton":
                 return this.payButton;
+            case "messageButton" :
+                return this.messageButton;
+            case "inboxButton":
+                return  this.inboxButton;
+            case "trashButton1":
+                return this.trashButton1;
+
 
 
         }
