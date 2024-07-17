@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.security.cert.X509Certificate;
 import java.util.List;
 
 public class DialogContent_US_M extends ParentPage {
@@ -154,6 +155,45 @@ public class DialogContent_US_M extends ParentPage {
     @FindBy(xpath = "//div[text()=' Debit ']")
     public WebElement debitText;
 
+    @FindBy(css = "[class='mat-datepicker-toggle-default-icon ng-star-inserted']+span")
+    public WebElement dateButton;
+
+    @FindBy(xpath = "//span[text()=' This year ']")
+    public WebElement thisYearButton;
+
+    @FindBy(xpath = "(//button[@class='mdc-button mat-mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base']//span)[3]")
+    public WebElement searchButton;
+
+    @FindBy(xpath = "(//div[@class='assignment ng-star-inserted']//following::strong)[1]")
+    public WebElement lesson;
+
+    @FindBy(xpath = "(//div[@class='mat-badge mat-badge-accent mat-badge-above mat-badge-after mat-badge-small mat-badge-hidden'])[2]")
+    public WebElement discussionButton;
+
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[45]")
+    public WebElement chatButton;
+
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[46]")
+    public WebElement contactsButton;
+
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[49]")
+    public WebElement attachFilesButton;
+
+    @FindBy(xpath = "//span[text()='Student_1 11A']")
+    public WebElement newContacts;
+
+    @FindBy(xpath = "//div/textarea")
+    public WebElement messageInput;
+
+    @FindBy(xpath = "(//span[@class='mat-mdc-focus-indicator'])[52]")
+    public WebElement sendMessageButton;
+
+    @FindBy(xpath = "//div/bdi")
+    public WebElement messageLocator;
+
+    @FindBy(xpath = "(//ms-dialog-content/div//div/div)[61]")
+    public WebElement confirmDateText;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "usernameInput":
@@ -184,6 +224,14 @@ public class DialogContent_US_M extends ParentPage {
                 return this.trashButton1;
             case "feeBalanceDetailButton":
                 return this.feeBalanceDetailButton;
+            case "dateButton":
+                return this.dateButton;
+            case "thisYearButton":
+                return this.thisYearButton;
+            case "searchButton":
+                return this.searchButton;
+            case "lesson":
+                return this.lesson;
 
 
 

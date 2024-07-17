@@ -29,12 +29,17 @@ public class LeftNav_US_M extends ParentPage {
     @FindBy(xpath = "(//span[@class='mdc-tab__content'])[2]")
     public WebElement studentTranscript;
 
+    @FindBy(xpath = "//span[text()='Assignments']")
+    public WebElement assignmentsButton;
+
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "hamburgerMenu":
                 return this.hamburgerMenu;
             case "gradingButton":
                 return this.gradingButton;
+            case "assignmentsButton":
+                return this.assignmentsButton;
         }
 
         return null;
