@@ -25,3 +25,7 @@ Feature: Assignment Functionality
     Then User should be able to start a discussion
 
     Then User should be able to click the chat button
+
+    Then User should be able to click the contacts button
+
+    Then User should be able to click the attach files button

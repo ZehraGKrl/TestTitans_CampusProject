@@ -4,10 +4,11 @@ import Pages.DialogContent_US_M;
 import Utilities.ParentPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class US_019_AssignmentsSteps extends ParentPage {
-    DialogContent_US_M dcm=new DialogContent_US_M();
+    DialogContent_US_M dcm = new DialogContent_US_M();
 
     @And("Click on the search button")
     public void clickOnTheSearchButton() {
@@ -30,7 +31,19 @@ public class US_019_AssignmentsSteps extends ParentPage {
 
     @Then("User should be able to click the chat button")
     public void userShouldBeAbleToClickTheChatButton() {
-        dcm.wait.until(ExpectedConditions.elementToBeClickable(dcm.chatButton));
-        dcm.myJSClick(dcm.chatButton);
+        wait.until(ExpectedConditions.visibilityOf(dcm.chatButton));
+        dcm.myClick(dcm.chatButton);
+    }
+
+    @Then("User should be able to click the contacts button")
+    public void userShouldBeAbleToClickTheContactsButton() {
+        wait.until(ExpectedConditions.visibilityOf(dcm.contactsButton));
+        dcm.myClick(dcm.contactsButton);
+    }
+
+    @Then("User should be able to click the attach files button")
+    public void userShouldBeAbleToClickTheAttachFilesButton() {
+        wait.until(ExpectedConditions.visibilityOf(dcm.attachFilesButton));
+        dcm.myClick(dcm.attachFilesButton);
     }
 }
