@@ -1,13 +1,28 @@
 package StepDefinitions.HamburgerMenu;
 
+import Pages.DialogContent_US_E;
+import Utilities.GWD;
+import Utilities.ParentPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
-public class US_005_Hamburger_Messaging {
+public class US_005_Hamburger_Messaging extends ParentPage {
     @When("the user clicks the messaging button and the new message button")
     public void theUserClicksTheMessagingButtonAndTheNewMessageButton() {
+
+        WebDriver driver = GWD.getDriver();
+
+        WebElement element = driver.findElement(By.xpath("//button[contains(@class, 'mat-mdc-menu-trigger')]"));
+        element.click();
+
+
     }
+
+
 
     @Then("the user clicks the add receivers button")
     public void theUserClicksTheAddReceiversButton() {
